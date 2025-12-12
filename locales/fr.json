@@ -4,7 +4,9 @@
     "description": "Nous créons des sites web et boutiques en ligne professionnels pour les entrepreneurs ambitieux. Des sites d'entreprise aux solutions e-commerce aux Pays-Bas."
   },
   "header": {
+    "home": "Accueil",
     "portfolio": "Portfolio",
+    "chatbots": "Chatbots",
     "contact": "Contact",
     "quote": "Demander un Devis"
   },

@@ -4,7 +4,9 @@
     "description": "Wij bouwen professionele websites en webshops voor ambitieuze ondernemers. Van bedrijfswebsites tot e-commerce oplossingen in Nederland."
   },
   "header": {
+    "home": "Home",
     "portfolio": "Portfolio",
+    "chatbots": "Chatbots",
     "contact": "Contact",
     "quote": "Offerte Aanvragen"
   },

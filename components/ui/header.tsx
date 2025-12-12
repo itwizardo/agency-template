@@ -36,25 +36,25 @@ export default function Header() {
                 href="/"
                 className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
               >
-                Home
+                {t.header.home}
               </Link>
               <Link
                 href="/portfolio"
                 className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
               >
-                Portfolio
+                {t.header.portfolio}
               </Link>
               <Link
                 href="/diensten/chatbots"
                 className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
               >
-                Chatbots
+                {t.header.chatbots}
               </Link>
               <Link
                 href="/contact"
                 className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
               >
-                Contact
+                {t.header.contact}
               </Link>
               <div className="flex items-center ml-4 pl-4 border-l border-gray-700/50">
                 <LanguageToggle />
@@ -101,21 +101,21 @@ export default function Header() {
                   className="px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl transition-all font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Home
+                  {t.header.home}
                 </Link>
                 <Link
                   href="/portfolio"
                   className="px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl transition-all font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Portfolio
+                  {t.header.portfolio}
                 </Link>
                 <Link
                   href="/diensten/chatbots"
                   className="px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl transition-all font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Chatbots
+                  {t.header.chatbots}
                 </Link>
                 <Link
                   href="/over-ons"
@@ -129,7 +129,7 @@ export default function Header() {
                   className="px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl transition-all font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Contact
+                  {t.header.contact}
                 </Link>
                 <Link
                   href="/contact"

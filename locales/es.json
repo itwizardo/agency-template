@@ -4,7 +4,9 @@
     "description": "Creamos sitios web y tiendas online profesionales para emprendedores ambiciosos. Desde sitios corporativos hasta soluciones e-commerce en los Países Bajos."
   },
   "header": {
+    "home": "Inicio",
     "portfolio": "Portafolio",
+    "chatbots": "Chatbots",
     "contact": "Contacto",
     "quote": "Solicitar Presupuesto"
   },
