@@ -26,7 +26,7 @@ const platformImages = [
   { src: 'https://cdn.simpleicons.org/nodedotjs/339933', alt: 'Node.js' },
   // Cloud & Tools (simpleicons CDN)
   { src: 'https://cdn.simpleicons.org/vercel/FFFFFF', alt: 'Vercel' },
-  { src: 'https://cdn.simpleicons.org/amazonaws/FF9900', alt: 'AWS' },
+  { src: 'https://cdn.simpleicons.org/amazonwebservices/FF9900', alt: 'AWS' },
   { src: 'https://cdn.simpleicons.org/googlecloud/4285F4', alt: 'Google Cloud' },
   { src: 'https://cdn.simpleicons.org/docker/2496ED', alt: 'Docker' },
   { src: 'https://cdn.simpleicons.org/github/FFFFFF', alt: 'GitHub' },

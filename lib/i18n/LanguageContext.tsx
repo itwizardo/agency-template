@@ -42,10 +42,20 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     setMounted(true);
+    // Check for saved preference first
     const saved = localStorage.getItem('locale') as Locale;
     if (saved && validLocales.includes(saved)) {
       setLocaleState(saved);
       document.documentElement.lang = saved;
+      return;
+    }
+
+    // Auto-detect browser language
+    const browserLang = navigator.language.split('-')[0] as Locale;
+    if (validLocales.includes(browserLang)) {
+      setLocaleState(browserLang);
+      document.documentElement.lang = browserLang;
+      localStorage.setItem('locale', browserLang);
     }
   }, []);
 
