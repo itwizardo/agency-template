@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "YourBrand | Professionele Website & Webshop Ontwikkeling",
+    "description": "Wij bouwen professionele websites en webshops voor ambitieuze ondernemers. Van bedrijfswebsites tot e-commerce oplossingen."
+  },
+  "header": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "chatbots": "Chatbots",
+    "contact": "Contact",
+    "quote": "Offerte Aanvragen"
+  },
+  "hero": {
+    "badge": "Vertrouwd door 100+ klanten",
+    "title": "Websites die presteren,",
+    "titleHighlight": "niet alleen bestaan",
+    "subtitle": "Wij bouwen professionele websites en webshops voor ambitieuze ondernemers. Van bedrijfswebsite tot complete webshop, wij zijn uw partner in online succes.",
+    "cta": "Gratis Strategiegesprek",
+    "ctaSecondary": "Bekijk Ons Werk"
+  },
+  "partners": {
+    "title": "Wij werken met de beste platformen en tools",
+    "subtitle": "Integraties met alle populaire platformen, CMS-systemen en betaalmethoden"
+  },
+  "features": {
+    "title": "Alles wat u nodig heeft voor online succes",
+    "subtitle": "Van ontwerp tot lancering en doorlopende optimalisatie - wij bieden complete web oplossingen",
+    "items": [
+      {
+        "title": "Maatwerk Web Design",
+        "description": "Unieke, op maat gemaakte designs die uw merk perfect weerspiegelen en bezoekers omzetten in klanten."
+      },
+      {
+        "title": "E-commerce & Integraties",
+        "description": "Webshops met betaalintegraties en koppelingen met boekhoudsoftware en voorraadsystemen."
+      },
+      {
+        "title": "SEO & Vindbaarheid",
+        "description": "Technische SEO-optimalisatie zodat uw website gevonden wordt door uw ideale klanten in Google."
+      },
+      {
+        "title": "Mobiel-First Ontwikkeling",
+        "description": "Responsive websites die perfect functioneren op elk apparaat, van smartphone tot desktop."
+      },
+      {
+        "title": "Snelheid & Performance",
+        "description": "Razendsnelle laadtijden voor betere resultaten en hogere rankings in zoekmachines."
+      },
+      {
+        "title": "Support & Onderhoud",
+        "description": "Doorlopende ondersteuning, updates en optimalisatie zodat uw website altijd top presteert."
+      }
+    ]
+  },
+  "testimonial": {
+    "quote": "Ze hebben onze online aanwezigheid volledig getransformeerd. Binnen 3 maanden na lancering zagen we een enorme groei in bezoekers en leads. Hun expertise en persoonlijke aanpak zijn ongeëvenaard.",
+    "author": "Jan Jansen",
+    "role": "Eigenaar",
+    "company": "Uw Klant Bedrijf"
+  },
+  "cta": {
+    "title": "Klaar om online te groeien?",
+    "subtitle": "Plan vandaag nog een gratis strategiegesprek en ontdek hoe wij uw website of webshop kunnen realiseren.",
+    "button": "Start Uw Project"
+  },
+  "footer": {
+    "description": "Wij bouwen websites en webshops die resultaat leveren. Uw betrouwbare partner voor online succes.",
+    "copyright": "YourBrand. Alle rechten voorbehouden.",
+    "services": {
+      "title": "Diensten",
+      "webshopDevelopment": "Website Ontwikkeling",
+      "ecommerceStrategy": "Webshop & E-commerce",
+      "seoMarketing": "SEO & Marketing",
+      "maintenance": "Onderhoud & Support",
+      "migrations": "Migraties & Redesign",
+      "chatbots": "Chatbot Installatie"
+    },
+    "company": {
+      "title": "Bedrijf",
+      "about": "Over Ons",
+      "portfolio": "Portfolio",
+      "blog": "Blog",
+      "careers": "Vacatures",
+      "contact": "Contact"
+    },
+    "resources": {
+      "title": "Hulpbronnen",
+      "ecommerceGuide": "E-commerce Gids",
+      "terms": "Algemene Voorwaarden",
+      "privacy": "Privacybeleid"
+    },
+    "social": {
+      "title": "Volg Ons"
+    }
+  }
+}

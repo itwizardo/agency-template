@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "YourBrand | Professionelle Website & Webshop Entwicklung",
+    "description": "Wir erstellen professionelle Websites und Webshops für ambitionierte Unternehmer. Von Unternehmenswebsites bis E-Commerce-Lösungen."
+  },
+  "header": {
+    "home": "Startseite",
+    "portfolio": "Portfolio",
+    "chatbots": "Chatbots",
+    "contact": "Kontakt",
+    "quote": "Angebot Anfordern"
+  },
+  "hero": {
+    "badge": "Vertraut von 100+ Kunden",
+    "title": "Websites die performen,",
+    "titleHighlight": "nicht nur existieren",
+    "subtitle": "Wir erstellen professionelle Websites und Webshops für ambitionierte Unternehmer. Von Unternehmenswebsites bis kompletten Webshops, wir sind Ihr Partner für Online-Erfolg.",
+    "cta": "Kostenloses Strategiegespräch",
+    "ctaSecondary": "Unsere Arbeit Ansehen"
+  },
+  "partners": {
+    "title": "Wir arbeiten mit den besten Plattformen und Tools",
+    "subtitle": "Integrationen mit allen beliebten Plattformen, CMS-Systemen und Zahlungsmethoden"
+  },
+  "features": {
+    "title": "Alles was Sie für Online-Erfolg brauchen",
+    "subtitle": "Vom Design bis zum Launch und laufender Optimierung - wir bieten komplette Web-Lösungen",
+    "items": [
+      {
+        "title": "Maßgeschneidertes Webdesign",
+        "description": "Einzigartige, maßgeschneiderte Designs, die Ihre Marke perfekt widerspiegeln und Besucher in Kunden verwandeln."
+      },
+      {
+        "title": "E-Commerce & Integrationen",
+        "description": "Webshops mit Zahlungsintegrationen und Verbindungen zu Buchhaltungssoftware und Lagersystemen."
+      },
+      {
+        "title": "SEO & Auffindbarkeit",
+        "description": "Technische SEO-Optimierung, damit Ihre Website von Ihren idealen Kunden bei Google gefunden wird."
+      },
+      {
+        "title": "Mobile-First Entwicklung",
+        "description": "Responsive Websites, die auf jedem Gerät perfekt funktionieren, vom Smartphone bis zum Desktop."
+      },
+      {
+        "title": "Geschwindigkeit & Performance",
+        "description": "Blitzschnelle Ladezeiten für bessere Ergebnisse und höhere Suchmaschinen-Rankings."
+      },
+      {
+        "title": "Support & Wartung",
+        "description": "Laufender Support, Updates und Optimierung, damit Ihre Website immer optimal performt."
+      }
+    ]
+  },
+  "testimonial": {
+    "quote": "Sie haben unsere Online-Präsenz komplett transformiert. Innerhalb von 3 Monaten nach dem Launch sahen wir enormes Wachstum bei Besuchern und Leads. Ihre Expertise und persönliche Herangehensweise sind unübertroffen.",
+    "author": "Max Müller",
+    "role": "Inhaber",
+    "company": "Ihr Kundenunternehmen"
+  },
+  "cta": {
+    "title": "Bereit online zu wachsen?",
+    "subtitle": "Planen Sie noch heute ein kostenloses Strategiegespräch und entdecken Sie, wie wir Ihre Website oder Ihren Webshop realisieren können.",
+    "button": "Ihr Projekt Starten"
+  },
+  "footer": {
+    "description": "Wir erstellen Websites und Webshops, die Ergebnisse liefern. Ihr vertrauenswürdiger Partner für Online-Erfolg.",
+    "copyright": "YourBrand. Alle Rechte vorbehalten.",
+    "services": {
+      "title": "Dienstleistungen",
+      "webshopDevelopment": "Website Entwicklung",
+      "ecommerceStrategy": "Webshop & E-Commerce",
+      "seoMarketing": "SEO & Marketing",
+      "maintenance": "Wartung & Support",
+      "migrations": "Migrationen & Redesign",
+      "chatbots": "Chatbot Installation"
+    },
+    "company": {
+      "title": "Unternehmen",
+      "about": "Über Uns",
+      "portfolio": "Portfolio",
+      "blog": "Blog",
+      "careers": "Karriere",
+      "contact": "Kontakt"
+    },
+    "resources": {
+      "title": "Ressourcen",
+      "ecommerceGuide": "E-Commerce Leitfaden",
+      "terms": "AGB",
+      "privacy": "Datenschutz"
+    },
+    "social": {
+      "title": "Folgen Sie Uns"
+    }
+  }
+}

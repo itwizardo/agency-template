@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "YourBrand | Professional Website & Webshop Development",
+    "description": "We build professional websites and webshops for ambitious entrepreneurs. From business websites to e-commerce solutions."
+  },
+  "header": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "chatbots": "Chatbots",
+    "contact": "Contact",
+    "quote": "Get a Quote"
+  },
+  "hero": {
+    "badge": "Trusted by 100+ clients",
+    "title": "Websites that perform,",
+    "titleHighlight": "not just exist",
+    "subtitle": "We build professional websites and webshops for ambitious entrepreneurs. From business websites to complete webshops, we are your partner in online success.",
+    "cta": "Free Strategy Call",
+    "ctaSecondary": "View Our Work"
+  },
+  "partners": {
+    "title": "We work with the best platforms and tools",
+    "subtitle": "Integrations with all popular platforms, CMS systems and payment methods"
+  },
+  "features": {
+    "title": "Everything you need for online success",
+    "subtitle": "From design to launch and ongoing optimisation - we offer complete web solutions",
+    "items": [
+      {
+        "title": "Custom Web Design",
+        "description": "Unique, tailor-made designs that perfectly reflect your brand and convert visitors into customers."
+      },
+      {
+        "title": "E-commerce & Integrations",
+        "description": "Webshops with payment integrations and connections to accounting software and inventory systems."
+      },
+      {
+        "title": "SEO & Discoverability",
+        "description": "Technical SEO optimisation so your website is found by your ideal customers on Google."
+      },
+      {
+        "title": "Mobile-First Development",
+        "description": "Responsive websites that function perfectly on every device, from smartphone to desktop."
+      },
+      {
+        "title": "Speed & Performance",
+        "description": "Lightning-fast loading times for better results and higher search engine rankings."
+      },
+      {
+        "title": "Support & Maintenance",
+        "description": "Ongoing support, updates and optimisation to ensure your website always performs at its best."
+      }
+    ]
+  },
+  "testimonial": {
+    "quote": "They completely transformed our online presence. Within 3 months of launch, we saw enormous growth in visitors and leads. Their expertise and personal approach are unmatched.",
+    "author": "John Smith",
+    "role": "Owner",
+    "company": "Your Client Company"
+  },
+  "cta": {
+    "title": "Ready to grow online?",
+    "subtitle": "Schedule a free strategy call today and discover how we can build your website or webshop.",
+    "button": "Start Your Project"
+  },
+  "footer": {
+    "description": "We build websites and webshops that deliver results. Your trusted partner for online success.",
+    "copyright": "YourBrand. All rights reserved.",
+    "services": {
+      "title": "Services",
+      "webshopDevelopment": "Website Development",
+      "ecommerceStrategy": "Webshop & E-commerce",
+      "seoMarketing": "SEO & Marketing",
+      "maintenance": "Maintenance & Support",
+      "migrations": "Migrations & Redesign",
+      "chatbots": "Chatbot Installation"
+    },
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "portfolio": "Portfolio",
+      "blog": "Blog",
+      "careers": "Careers",
+      "contact": "Contact"
+    },
+    "resources": {
+      "title": "Resources",
+      "ecommerceGuide": "E-commerce Guide",
+      "terms": "Terms & Conditions",
+      "privacy": "Privacy Policy"
+    },
+    "social": {
+      "title": "Follow Us"
+    }
+  }
+}

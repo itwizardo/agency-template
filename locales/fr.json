@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "YourBrand | Développement Professionnel de Sites Web & Boutiques",
+    "description": "Nous créons des sites web et boutiques en ligne professionnels pour les entrepreneurs ambitieux. Des sites d'entreprise aux solutions e-commerce."
+  },
+  "header": {
+    "home": "Accueil",
+    "portfolio": "Portfolio",
+    "chatbots": "Chatbots",
+    "contact": "Contact",
+    "quote": "Demander un Devis"
+  },
+  "hero": {
+    "badge": "Approuvé par plus de 100 clients",
+    "title": "Des sites web qui performent,",
+    "titleHighlight": "pas seulement existent",
+    "subtitle": "Nous créons des sites web et boutiques en ligne professionnels pour les entrepreneurs ambitieux. Du site d'entreprise à la boutique complète, nous sommes votre partenaire pour le succès en ligne.",
+    "cta": "Appel Stratégique Gratuit",
+    "ctaSecondary": "Voir Nos Réalisations"
+  },
+  "partners": {
+    "title": "Nous travaillons avec les meilleures plateformes et outils",
+    "subtitle": "Intégrations avec toutes les plateformes populaires, systèmes CMS et méthodes de paiement"
+  },
+  "features": {
+    "title": "Tout ce dont vous avez besoin pour réussir en ligne",
+    "subtitle": "De la conception au lancement et à l'optimisation continue - nous offrons des solutions web complètes",
+    "items": [
+      {
+        "title": "Design Web Sur Mesure",
+        "description": "Des designs uniques et personnalisés qui reflètent parfaitement votre marque et convertissent les visiteurs en clients."
+      },
+      {
+        "title": "E-Commerce & Intégrations",
+        "description": "Boutiques avec intégrations de paiement et connexions aux logiciels de comptabilité et systèmes d'inventaire."
+      },
+      {
+        "title": "SEO & Visibilité",
+        "description": "Optimisation SEO technique pour que votre site soit trouvé par vos clients idéaux sur Google."
+      },
+      {
+        "title": "Développement Mobile-First",
+        "description": "Sites responsives qui fonctionnent parfaitement sur tous les appareils, du smartphone au desktop."
+      },
+      {
+        "title": "Vitesse & Performance",
+        "description": "Temps de chargement ultra-rapides pour de meilleurs résultats et un meilleur classement dans les moteurs de recherche."
+      },
+      {
+        "title": "Support & Maintenance",
+        "description": "Support continu, mises à jour et optimisation pour que votre site performe toujours au maximum."
+      }
+    ]
+  },
+  "testimonial": {
+    "quote": "Ils ont complètement transformé notre présence en ligne. Dans les 3 mois suivant le lancement, nous avons vu une croissance énorme des visiteurs et des leads. Leur expertise et approche personnelle sont inégalées.",
+    "author": "Pierre Dupont",
+    "role": "Propriétaire",
+    "company": "Votre Entreprise Cliente"
+  },
+  "cta": {
+    "title": "Prêt à croître en ligne ?",
+    "subtitle": "Planifiez un appel stratégique gratuit aujourd'hui et découvrez comment nous pouvons réaliser votre site web ou boutique.",
+    "button": "Démarrer Votre Projet"
+  },
+  "footer": {
+    "description": "Nous créons des sites web et boutiques qui livrent des résultats. Votre partenaire de confiance pour le succès en ligne.",
+    "copyright": "YourBrand. Tous droits réservés.",
+    "services": {
+      "title": "Services",
+      "webshopDevelopment": "Développement Web",
+      "ecommerceStrategy": "Boutique & E-Commerce",
+      "seoMarketing": "SEO & Marketing",
+      "maintenance": "Maintenance & Support",
+      "migrations": "Migrations & Refonte",
+      "chatbots": "Installation Chatbot"
+    },
+    "company": {
+      "title": "Entreprise",
+      "about": "À Propos",
+      "portfolio": "Portfolio",
+      "blog": "Blog",
+      "careers": "Carrières",
+      "contact": "Contact"
+    },
+    "resources": {
+      "title": "Ressources",
+      "ecommerceGuide": "Guide E-Commerce",
+      "terms": "Conditions Générales",
+      "privacy": "Politique de Confidentialité"
+    },
+    "social": {
+      "title": "Suivez-Nous"
+    }
+  }
+}

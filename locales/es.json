@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "YourBrand | Desarrollo Profesional de Sitios Web y Tiendas Online",
+    "description": "Creamos sitios web y tiendas online profesionales para emprendedores ambiciosos. Desde sitios corporativos hasta soluciones e-commerce."
+  },
+  "header": {
+    "home": "Inicio",
+    "portfolio": "Portafolio",
+    "chatbots": "Chatbots",
+    "contact": "Contacto",
+    "quote": "Solicitar Presupuesto"
+  },
+  "hero": {
+    "badge": "Confiado por más de 100 clientes",
+    "title": "Sitios web que rinden,",
+    "titleHighlight": "no solo existen",
+    "subtitle": "Creamos sitios web y tiendas online profesionales para emprendedores ambiciosos. Desde sitios corporativos hasta tiendas completas, somos su socio para el éxito online.",
+    "cta": "Llamada Estratégica Gratis",
+    "ctaSecondary": "Ver Nuestro Trabajo"
+  },
+  "partners": {
+    "title": "Trabajamos con las mejores plataformas y herramientas",
+    "subtitle": "Integraciones con todas las plataformas populares, sistemas CMS y métodos de pago"
+  },
+  "features": {
+    "title": "Todo lo que necesitas para el éxito online",
+    "subtitle": "Desde el diseño hasta el lanzamiento y la optimización continua - ofrecemos soluciones web completas",
+    "items": [
+      {
+        "title": "Diseño Web Personalizado",
+        "description": "Diseños únicos y a medida que reflejan perfectamente tu marca y convierten visitantes en clientes."
+      },
+      {
+        "title": "E-Commerce e Integraciones",
+        "description": "Tiendas con integraciones de pago y conexiones con software de contabilidad y sistemas de inventario."
+      },
+      {
+        "title": "SEO y Visibilidad",
+        "description": "Optimización SEO técnica para que tu sitio sea encontrado por tus clientes ideales en Google."
+      },
+      {
+        "title": "Desarrollo Mobile-First",
+        "description": "Sitios responsivos que funcionan perfectamente en cualquier dispositivo, desde smartphone hasta desktop."
+      },
+      {
+        "title": "Velocidad y Rendimiento",
+        "description": "Tiempos de carga ultrarrápidos para mejores resultados y rankings más altos en buscadores."
+      },
+      {
+        "title": "Soporte y Mantenimiento",
+        "description": "Soporte continuo, actualizaciones y optimización para que tu sitio siempre rinda al máximo."
+      }
+    ]
+  },
+  "testimonial": {
+    "quote": "Transformaron completamente nuestra presencia online. En 3 meses desde el lanzamiento, vimos un crecimiento enorme en visitantes y leads. Su experiencia y enfoque personal son inigualables.",
+    "author": "Carlos García",
+    "role": "Propietario",
+    "company": "Su Empresa Cliente"
+  },
+  "cta": {
+    "title": "¿Listo para crecer online?",
+    "subtitle": "Programa una llamada estratégica gratis hoy y descubre cómo podemos crear tu sitio web o tienda online.",
+    "button": "Iniciar Tu Proyecto"
+  },
+  "footer": {
+    "description": "Creamos sitios web y tiendas que entregan resultados. Su socio de confianza para el éxito online.",
+    "copyright": "YourBrand. Todos los derechos reservados.",
+    "services": {
+      "title": "Servicios",
+      "webshopDevelopment": "Desarrollo Web",
+      "ecommerceStrategy": "Tienda & E-Commerce",
+      "seoMarketing": "SEO & Marketing",
+      "maintenance": "Mantenimiento & Soporte",
+      "migrations": "Migraciones & Rediseño",
+      "chatbots": "Instalación de Chatbot"
+    },
+    "company": {
+      "title": "Empresa",
+      "about": "Sobre Nosotros",
+      "portfolio": "Portafolio",
+      "blog": "Blog",
+      "careers": "Carreras",
+      "contact": "Contacto"
+    },
+    "resources": {
+      "title": "Recursos",
+      "ecommerceGuide": "Guía E-Commerce",
+      "terms": "Términos y Condiciones",
+      "privacy": "Política de Privacidad"
+    },
+    "social": {
+      "title": "Síguenos"
+    }
+  }
+}
