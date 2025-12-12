@@ -16,6 +16,10 @@ A modern, multilingual web agency template built with Next.js 15, React 19, and 
 - SEO optimized
 - 15+ pages included
 
+## Deploy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/itwizardo/agency-template)
+
 ## Demo
 
 [View Live Demo](https://gwcwebdesign.com)
