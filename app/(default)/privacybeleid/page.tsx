@@ -18,7 +18,7 @@ export default function Privacybeleid() {
 WeWork Weteringschans
 Weteringschans 165
 1017 XD Amsterdam
-Email: info@georswebshopcompany.com
+Email: info@gwcwebdesign.com
 KvK: 94768234`,
         },
         {
@@ -64,7 +64,7 @@ KvK: 94768234`,
         },
         {
           title: "9. Contact",
-          content: `Heeft u vragen over dit privacybeleid of wilt u gebruik maken van uw rechten? Neem dan contact met ons op via info@georswebshopcompany.com.`,
+          content: `Heeft u vragen over dit privacybeleid of wilt u gebruik maken van uw rechten? Neem dan contact met ons op via info@gwcwebdesign.com.`,
         },
       ],
     },
@@ -79,7 +79,7 @@ KvK: 94768234`,
 WeWork Weteringschans
 Weteringschans 165
 1017 XD Amsterdam
-Email: info@georswebshopcompany.com
+Email: info@gwcwebdesign.com
 CoC: 94768234`,
         },
         {
@@ -125,7 +125,7 @@ CoC: 94768234`,
         },
         {
           title: "9. Contact",
-          content: `Do you have questions about this privacy policy or do you want to exercise your rights? Please contact us at info@georswebshopcompany.com.`,
+          content: `Do you have questions about this privacy policy or do you want to exercise your rights? Please contact us at info@gwcwebdesign.com.`,
         },
       ],
     },
@@ -134,7 +134,7 @@ CoC: 94768234`,
       subtitle: "Zuletzt aktualisiert: Dezember 2024",
       intro: "GWC (Geors Webshop Company) respektiert Ihre Privatsphäre und stellt sicher, dass die von Ihnen bereitgestellten persönlichen Informationen vertraulich behandelt werden.",
       sections: [
-        { title: "1. Wer sind wir?", content: "GWC (Geors Webshop Company)\nWeWork Weteringschans\nWeteringschans 165\n1017 XD Amsterdam\nEmail: info@georswebshopcompany.com\nHRB: 94768234" },
+        { title: "1. Wer sind wir?", content: "GWC (Geors Webshop Company)\nWeWork Weteringschans\nWeteringschans 165\n1017 XD Amsterdam\nEmail: info@gwcwebdesign.com\nHRB: 94768234" },
         { title: "2. Welche Daten erheben wir?", content: "Wir erheben folgende personenbezogene Daten:\n- Name und Kontaktdaten (E-Mail, Telefon, Adresse)\n- Unternehmensinformationen\n- Kommunikation per E-Mail oder Telefon\n- Daten über Ihre Nutzung unserer Website (via Cookies)" },
         { title: "3. Wofür nutzen wir Ihre Daten?", content: "Wir nutzen Ihre Daten für:\n- Die Durchführung unserer Dienstleistungen\n- Kommunikation über Ihr Projekt\n- Versand von Angeboten und Rechnungen\n- Verbesserung unserer Website und Dienste\n- Erfüllung gesetzlicher Verpflichtungen" },
         { title: "4. Wie lange speichern wir Ihre Daten?", content: "Wir speichern Ihre Daten nicht länger als für den Zweck notwendig. Finanzdaten bewahren wir gemäß gesetzlicher Aufbewahrungspflicht 7 Jahre auf." },
@@ -142,7 +142,7 @@ CoC: 94768234`,
         { title: "6. Cookies", content: "Unsere Website verwendet Cookies, um die Funktionalität zu verbessern und das Besucherverhalten zu analysieren. Sie können Cookies über Ihre Browsereinstellungen deaktivieren." },
         { title: "7. Ihre Rechte", content: "Sie haben das Recht:\n- Ihre personenbezogenen Daten einzusehen\n- Ihre personenbezogenen Daten zu korrigieren oder zu löschen\n- Der Verarbeitung zu widersprechen\n- Eine Beschwerde bei der Datenschutzbehörde einzureichen" },
         { title: "8. Sicherheit", content: "Wir treffen angemessene technische und organisatorische Maßnahmen, um Ihre personenbezogenen Daten vor Verlust oder unrechtmäßiger Verarbeitung zu schützen." },
-        { title: "9. Kontakt", content: "Haben Sie Fragen zu dieser Datenschutzerklärung oder möchten Sie Ihre Rechte ausüben? Kontaktieren Sie uns unter info@georswebshopcompany.com." },
+        { title: "9. Kontakt", content: "Haben Sie Fragen zu dieser Datenschutzerklärung oder möchten Sie Ihre Rechte ausüben? Kontaktieren Sie uns unter info@gwcwebdesign.com." },
       ],
     },
     fr: {
@@ -150,7 +150,7 @@ CoC: 94768234`,
       subtitle: "Dernière mise à jour : décembre 2024",
       intro: "GWC (Geors Webshop Company) respecte votre vie privée et veille à ce que les informations personnelles que vous nous fournissez soient traitées de manière confidentielle.",
       sections: [
-        { title: "1. Qui sommes-nous ?", content: "GWC (Geors Webshop Company)\nWeWork Weteringschans\nWeteringschans 165\n1017 XD Amsterdam\nEmail : info@georswebshopcompany.com\nKvK : 94768234" },
+        { title: "1. Qui sommes-nous ?", content: "GWC (Geors Webshop Company)\nWeWork Weteringschans\nWeteringschans 165\n1017 XD Amsterdam\nEmail : info@gwcwebdesign.com\nKvK : 94768234" },
         { title: "2. Quelles données collectons-nous ?", content: "Nous collectons les données personnelles suivantes :\n- Nom et coordonnées (email, téléphone, adresse)\n- Informations sur l'entreprise\n- Communications par email ou téléphone\n- Données sur votre utilisation de notre site (via cookies)" },
         { title: "3. Pourquoi utilisons-nous vos données ?", content: "Nous utilisons vos données pour :\n- L'exécution de nos services\n- La communication sur votre projet\n- L'envoi de devis et factures\n- L'amélioration de notre site et services\n- Le respect des obligations légales" },
         { title: "4. Combien de temps conservons-nous vos données ?", content: "Nous ne conservons pas vos données plus longtemps que nécessaire. Les données financières sont conservées 7 ans conformément aux obligations légales." },
@@ -158,7 +158,7 @@ CoC: 94768234`,
         { title: "6. Cookies", content: "Notre site utilise des cookies pour améliorer les fonctionnalités et analyser le comportement des visiteurs. Vous pouvez désactiver les cookies via les paramètres de votre navigateur." },
         { title: "7. Vos droits", content: "Vous avez le droit de :\n- Consulter vos données personnelles\n- Corriger ou supprimer vos données personnelles\n- Vous opposer au traitement\n- Déposer une plainte auprès de l'Autorité de Protection des Données" },
         { title: "8. Sécurité", content: "Nous prenons des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre la perte ou le traitement illicite." },
-        { title: "9. Contact", content: "Vous avez des questions sur cette politique de confidentialité ou souhaitez exercer vos droits ? Contactez-nous à info@georswebshopcompany.com." },
+        { title: "9. Contact", content: "Vous avez des questions sur cette politique de confidentialité ou souhaitez exercer vos droits ? Contactez-nous à info@gwcwebdesign.com." },
       ],
     },
     es: {
@@ -166,7 +166,7 @@ CoC: 94768234`,
       subtitle: "Última actualización: diciembre 2024",
       intro: "GWC (Geors Webshop Company) respeta su privacidad y garantiza que la información personal que nos proporciona sea tratada de forma confidencial.",
       sections: [
-        { title: "1. ¿Quiénes somos?", content: "GWC (Geors Webshop Company)\nWeWork Weteringschans\nWeteringschans 165\n1017 XD Amsterdam\nEmail: info@georswebshopcompany.com\nNIF: 94768234" },
+        { title: "1. ¿Quiénes somos?", content: "GWC (Geors Webshop Company)\nWeWork Weteringschans\nWeteringschans 165\n1017 XD Amsterdam\nEmail: info@gwcwebdesign.com\nNIF: 94768234" },
         { title: "2. ¿Qué datos recopilamos?", content: "Recopilamos los siguientes datos personales:\n- Nombre y datos de contacto (email, teléfono, dirección)\n- Información de la empresa\n- Comunicación por email o teléfono\n- Datos sobre su uso de nuestro sitio web (via cookies)" },
         { title: "3. ¿Para qué usamos sus datos?", content: "Usamos sus datos para:\n- La ejecución de nuestros servicios\n- Comunicación sobre su proyecto\n- Envío de presupuestos y facturas\n- Mejora de nuestro sitio web y servicios\n- Cumplimiento de obligaciones legales" },
         { title: "4. ¿Cuánto tiempo conservamos sus datos?", content: "No conservamos sus datos más tiempo del necesario. Los datos financieros se conservan 7 años según la obligación legal de retención." },
@@ -174,7 +174,7 @@ CoC: 94768234`,
         { title: "6. Cookies", content: "Nuestro sitio utiliza cookies para mejorar la funcionalidad y analizar el comportamiento de los visitantes. Puede desactivar las cookies a través de la configuración de su navegador." },
         { title: "7. Sus derechos", content: "Tiene derecho a:\n- Ver sus datos personales\n- Corregir o eliminar sus datos personales\n- Oponerse al procesamiento\n- Presentar una queja ante la Autoridad de Protección de Datos" },
         { title: "8. Seguridad", content: "Tomamos medidas técnicas y organizativas apropiadas para proteger sus datos personales contra pérdida o procesamiento ilegal." },
-        { title: "9. Contacto", content: "¿Tiene preguntas sobre esta política de privacidad o desea ejercer sus derechos? Contáctenos en info@georswebshopcompany.com." },
+        { title: "9. Contacto", content: "¿Tiene preguntas sobre esta política de privacidad o desea ejercer sus derechos? Contáctenos en info@gwcwebdesign.com." },
       ],
     },
   };

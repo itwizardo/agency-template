@@ -27,7 +27,7 @@ export async function POST(request: Request) {
     // Send email via Resend
     const { data, error } = await resend.emails.send({
       from: 'GWC Contact Form <onboarding@resend.dev>',
-      to: ['info@georswebshopcompany.com'],
+      to: ['info@gwcwebdesign.com'],
       replyTo: email,
       subject: `Nieuw contactformulier bericht van ${name}`,
       html: `

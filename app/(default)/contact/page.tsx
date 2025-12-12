@@ -33,7 +33,7 @@ export default function Contact() {
       },
       info: {
         title: "Contactgegevens",
-        email: "info@georswebshopcompany.com",
+        email: "info@gwcwebdesign.com",
         phone: "+31 (0)20 123 4567",
         address: "WeWork Weteringschans\nWeteringschans 165\n1017 XD Amsterdam",
         hours: "Ma - Vr: 09:00 - 17:30",
@@ -58,7 +58,7 @@ export default function Contact() {
       },
       info: {
         title: "Contact Information",
-        email: "info@georswebshopcompany.com",
+        email: "info@gwcwebdesign.com",
         phone: "+31 (0)20 123 4567",
         address: "WeWork Weteringschans\nWeteringschans 165\n1017 XD Amsterdam",
         hours: "Mon - Fri: 09:00 - 17:30",
@@ -83,7 +83,7 @@ export default function Contact() {
       },
       info: {
         title: "Kontaktinformationen",
-        email: "info@georswebshopcompany.com",
+        email: "info@gwcwebdesign.com",
         phone: "+31 (0)20 123 4567",
         address: "WeWork Weteringschans\nWeteringschans 165\n1017 XD Amsterdam",
         hours: "Mo - Fr: 09:00 - 17:30",
@@ -108,7 +108,7 @@ export default function Contact() {
       },
       info: {
         title: "Coordonnées",
-        email: "info@georswebshopcompany.com",
+        email: "info@gwcwebdesign.com",
         phone: "+31 (0)20 123 4567",
         address: "WeWork Weteringschans\nWeteringschans 165\n1017 XD Amsterdam",
         hours: "Lun - Ven: 09:00 - 17:30",
@@ -133,7 +133,7 @@ export default function Contact() {
       },
       info: {
         title: "Información de contacto",
-        email: "info@georswebshopcompany.com",
+        email: "info@gwcwebdesign.com",
         phone: "+31 (0)20 123 4567",
         address: "WeWork Weteringschans\nWeteringschans 165\n1017 XD Amsterdam",
         hours: "Lun - Vie: 09:00 - 17:30",
