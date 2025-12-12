@@ -5,38 +5,35 @@ import { useLanguage } from '@/lib/i18n';
 
 const DomeGallery = dynamic(() => import('./dome-gallery'), { ssr: false });
 
-// Platform and technology logos
+// Platform and technology logos - using local files and cdn.simpleicons.org
 const platformImages = [
-  // E-commerce platforms
-  { src: 'https://cdn.worldvectorlogo.com/logos/woocommerce.svg', alt: 'WooCommerce' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/shopify.svg', alt: 'Shopify' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/magento.svg', alt: 'Magento' },
-  // Payment providers
-  { src: 'https://cdn.worldvectorlogo.com/logos/stripe-4.svg', alt: 'Stripe' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/paypal-2.svg', alt: 'PayPal' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/klarna-1.svg', alt: 'Klarna' },
-  { src: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Ideal_logo.svg', alt: 'iDEAL' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/mollie-1.svg', alt: 'Mollie' },
-  // Frameworks & Tech
-  { src: 'https://cdn.worldvectorlogo.com/logos/react-2.svg', alt: 'React' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/next-js.svg', alt: 'Next.js' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg', alt: 'Tailwind CSS' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/typescript.svg', alt: 'TypeScript' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/nodejs-1.svg', alt: 'Node.js' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/wordpress-icon-1.svg', alt: 'WordPress' },
-  // Cloud & Tools
-  { src: 'https://cdn.worldvectorlogo.com/logos/vercel.svg', alt: 'Vercel' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/aws-2.svg', alt: 'AWS' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg', alt: 'Google Cloud' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/docker-4.svg', alt: 'Docker' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/github-icon-1.svg', alt: 'GitHub' },
-  // Shipping
-  { src: 'https://cdn.worldvectorlogo.com/logos/dhl-1.svg', alt: 'DHL' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/postnl.svg', alt: 'PostNL' },
-  // Analytics & Marketing
-  { src: 'https://cdn.worldvectorlogo.com/logos/google-analytics-4.svg', alt: 'Google Analytics' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/mailchimp-freddie-icon.svg', alt: 'Mailchimp' },
-  { src: 'https://cdn.worldvectorlogo.com/logos/hubspot.svg', alt: 'HubSpot' },
+  // E-commerce platforms (local files)
+  { src: '/images/woocommerce-icon-svgrepo-com.svg', alt: 'WooCommerce' },
+  { src: '/images/shopify-color-svgrepo-com.svg', alt: 'Shopify' },
+  { src: '/images/wordpress-svgrepo-com.svg', alt: 'WordPress' },
+  // Payment providers (local files)
+  { src: '/images/stripe-svgrepo-com.svg', alt: 'Stripe' },
+  { src: '/images/paypal-svgrepo-com.svg', alt: 'PayPal' },
+  { src: '/images/klarna-svgrepo-com.svg', alt: 'Klarna' },
+  { src: '/images/ideal-logo-svgrepo-com.svg', alt: 'iDEAL' },
+  // Shipping (local files)
+  { src: '/images/dhl-express-logo-svgrepo-com.svg', alt: 'DHL' },
+  // Frameworks & Tech (simpleicons CDN - reliable)
+  { src: 'https://cdn.simpleicons.org/react/61DAFB', alt: 'React' },
+  { src: 'https://cdn.simpleicons.org/nextdotjs/FFFFFF', alt: 'Next.js' },
+  { src: 'https://cdn.simpleicons.org/tailwindcss/06B6D4', alt: 'Tailwind CSS' },
+  { src: 'https://cdn.simpleicons.org/typescript/3178C6', alt: 'TypeScript' },
+  { src: 'https://cdn.simpleicons.org/nodedotjs/339933', alt: 'Node.js' },
+  // Cloud & Tools (simpleicons CDN)
+  { src: 'https://cdn.simpleicons.org/vercel/FFFFFF', alt: 'Vercel' },
+  { src: 'https://cdn.simpleicons.org/amazonaws/FF9900', alt: 'AWS' },
+  { src: 'https://cdn.simpleicons.org/googlecloud/4285F4', alt: 'Google Cloud' },
+  { src: 'https://cdn.simpleicons.org/docker/2496ED', alt: 'Docker' },
+  { src: 'https://cdn.simpleicons.org/github/FFFFFF', alt: 'GitHub' },
+  // Analytics & Marketing (simpleicons CDN)
+  { src: 'https://cdn.simpleicons.org/googleanalytics/E37400', alt: 'Google Analytics' },
+  { src: 'https://cdn.simpleicons.org/mailchimp/FFE01B', alt: 'Mailchimp' },
+  { src: 'https://cdn.simpleicons.org/hubspot/FF7A59', alt: 'HubSpot' },
 ];
 
 const content = {
