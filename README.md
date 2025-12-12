@@ -1,5 +1,7 @@
 # Agency Website Template
 
+![Agency Template Preview](https://i.imgur.com/F4IFn07.png)
+
 A modern, multilingual web agency template built with Next.js 15, React 19, and Tailwind CSS v4.
 
 ## Features
