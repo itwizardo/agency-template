@@ -10,6 +10,7 @@ export default function Contact() {
     name: '',
     email: '',
     phone: '',
+    whatsapp: '',
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
@@ -25,6 +26,8 @@ export default function Contact() {
         name: "Naam",
         email: "E-mailadres",
         phone: "Telefoonnummer",
+        whatsapp: "WhatsApp nummer",
+        whatsappPlaceholder: "+31 6 12345678",
         message: "Uw bericht",
         submit: "Verstuur bericht",
         sending: "Versturen...",
@@ -50,6 +53,8 @@ export default function Contact() {
         name: "Name",
         email: "Email address",
         phone: "Phone number",
+        whatsapp: "WhatsApp number",
+        whatsappPlaceholder: "+31 6 12345678",
         message: "Your message",
         submit: "Send message",
         sending: "Sending...",
@@ -75,6 +80,8 @@ export default function Contact() {
         name: "Name",
         email: "E-Mail-Adresse",
         phone: "Telefonnummer",
+        whatsapp: "WhatsApp Nummer",
+        whatsappPlaceholder: "+31 6 12345678",
         message: "Ihre Nachricht",
         submit: "Nachricht senden",
         sending: "Senden...",
@@ -100,6 +107,8 @@ export default function Contact() {
         name: "Nom",
         email: "Adresse e-mail",
         phone: "Numéro de téléphone",
+        whatsapp: "Numéro WhatsApp",
+        whatsappPlaceholder: "+31 6 12345678",
         message: "Votre message",
         submit: "Envoyer le message",
         sending: "Envoi...",
@@ -125,6 +134,8 @@ export default function Contact() {
         name: "Nombre",
         email: "Dirección de correo electrónico",
         phone: "Número de teléfono",
+        whatsapp: "Número de WhatsApp",
+        whatsappPlaceholder: "+31 6 12345678",
         message: "Su mensaje",
         submit: "Enviar mensaje",
         sending: "Enviando...",
@@ -225,18 +236,35 @@ export default function Contact() {
                       />
                     </div>
                   </div>
-                  <div className="mb-6">
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      {t.form.phone}
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-500"
-                    />
+                  <div className="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                        {t.form.phone}
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-500"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="whatsapp" className="block text-sm font-medium text-gray-300 mb-2">
+                        {t.form.whatsapp} *
+                      </label>
+                      <input
+                        type="tel"
+                        id="whatsapp"
+                        name="whatsapp"
+                        required
+                        placeholder={t.form.whatsappPlaceholder}
+                        value={formData.whatsapp}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-500"
+                      />
+                    </div>
                   </div>
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">

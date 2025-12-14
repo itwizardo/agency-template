@@ -1,55 +1,59 @@
-import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+
+const TELEGRAM_BOT_TOKEN = '7984693529:AAFcLj_dKH39jnpwQg_Cc5clgTy0aWkkGXI';
+const TELEGRAM_CHAT_ID = '7984693529';
+
+async function sendToTelegram(message: string) {
+  const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      chat_id: TELEGRAM_CHAT_ID,
+      text: message,
+      parse_mode: 'HTML',
+    }),
+  });
+
+  if (!response.ok) {
+    const error = await response.text();
+    console.error('Telegram API error:', error);
+    throw new Error('Failed to send Telegram message');
+  }
+
+  return response.json();
+}
 
 export async function POST(request: Request) {
   try {
-    const { name, email, phone, message } = await request.json();
+    const { name, email, phone, whatsapp, message } = await request.json();
 
     // Validate required fields
-    if (!name || !email || !message) {
+    if (!name || !email || !whatsapp || !message) {
       return NextResponse.json(
-        { error: 'Name, email, and message are required' },
+        { error: 'Name, email, WhatsApp, and message are required' },
         { status: 400 }
       );
     }
 
-    // Check for API key at runtime
-    if (!process.env.RESEND_API_KEY) {
-      console.error('RESEND_API_KEY is not configured');
-      return NextResponse.json(
-        { error: 'Email service is not configured' },
-        { status: 500 }
-      );
-    }
+    // Format the message for Telegram
+    const telegramMessage = `
+<b>📬 Nieuw contactformulier bericht</b>
 
-    const resend = new Resend(process.env.RESEND_API_KEY);
+<b>Naam:</b> ${name}
+<b>E-mail:</b> ${email}
+<b>Telefoon:</b> ${phone || 'Niet opgegeven'}
+<b>WhatsApp:</b> ${whatsapp}
 
-    // Send email via Resend
-    const { data, error } = await resend.emails.send({
-      from: 'GWC Contact Form <onboarding@resend.dev>',
-      to: ['info@gwcwebdesign.com'],
-      replyTo: email,
-      subject: `Nieuw contactformulier bericht van ${name}`,
-      html: `
-        <h2>Nieuw bericht via het contactformulier</h2>
-        <p><strong>Naam:</strong> ${name}</p>
-        <p><strong>E-mail:</strong> ${email}</p>
-        <p><strong>Telefoon:</strong> ${phone || 'Niet opgegeven'}</p>
-        <hr />
-        <p><strong>Bericht:</strong></p>
-        <p>${message.replace(/\n/g, '<br />')}</p>
-      `,
-    });
+<b>Bericht:</b>
+${message}
+`.trim();
 
-    if (error) {
-      console.error('Resend error:', error);
-      return NextResponse.json(
-        { error: 'Failed to send email' },
-        { status: 500 }
-      );
-    }
+    // Send to Telegram
+    await sendToTelegram(telegramMessage);
 
-    return NextResponse.json({ success: true, id: data?.id });
+    return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Contact form error:', error);
     return NextResponse.json(
