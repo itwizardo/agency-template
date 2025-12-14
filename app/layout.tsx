@@ -2,7 +2,9 @@ import "./css/style.css";
 
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import { Suspense } from "react";
 import { LanguageProvider } from "@/lib/i18n";
+import { PHProvider, PostHogPageview } from "./providers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,11 +32,16 @@ export default function RootLayout({
       <body
         className={`${inter.variable} bg-gray-900 font-inter tracking-tight text-gray-100 antialiased`}
       >
-        <LanguageProvider>
-          <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
-            {children}
-          </div>
-        </LanguageProvider>
+        <PHProvider>
+          <Suspense fallback={null}>
+            <PostHogPageview />
+          </Suspense>
+          <LanguageProvider>
+            <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
+              {children}
+            </div>
+          </LanguageProvider>
+        </PHProvider>
 
         {/* Botpress Chat Widget - Replace YOUR_BOT_ID with your actual Botpress bot ID */}
         <Script
