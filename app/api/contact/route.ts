@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 const TELEGRAM_BOT_TOKEN = '7984693529:AAFcLj_dKH39jnpwQg_Cc5clgTy0aWkkGXI';
-const TELEGRAM_CHAT_ID = '7984693529';
+const TELEGRAM_CHAT_ID = '648599174';
 
 async function sendToTelegram(message: string) {
   const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
