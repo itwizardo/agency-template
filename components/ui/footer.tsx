@@ -84,6 +84,46 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   {t.footer.services.chatbots}
                 </Link>
               </li>
+              <li>
+                <Link
+                  className="text-gray-400 transition hover:text-white"
+                  href="/diensten/domeinregistratie"
+                >
+                  {t.footer.services.domainRegistration}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-gray-400 transition hover:text-white"
+                  href="/diensten/webdesign"
+                >
+                  {t.footer.services.webdesign}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-gray-400 transition hover:text-white"
+                  href="/diensten/webhosting"
+                >
+                  {t.footer.services.webhosting}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-gray-400 transition hover:text-white"
+                  href="/diensten/website-bouw"
+                >
+                  {t.footer.services.websiteBuild}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-gray-400 transition hover:text-white"
+                  href="/diensten/zoekmachine-optimalisatie"
+                >
+                  {t.footer.services.seo}
+                </Link>
+              </li>
             </ul>
           </div>
 

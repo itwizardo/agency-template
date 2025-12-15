@@ -73,7 +73,12 @@
       "seoMarketing": "SEO & Marketing",
       "maintenance": "Maintenance & Support",
       "migrations": "Migrations & Redesign",
-      "chatbots": "Chatbot Installation"
+      "chatbots": "Chatbot Installation",
+      "domainRegistration": "Domain Registration",
+      "webdesign": "Web Design",
+      "webhosting": "Web Hosting",
+      "websiteBuild": "Website Development",
+      "seo": "Search Engine Optimization"
     },
     "company": {
       "title": "Company",

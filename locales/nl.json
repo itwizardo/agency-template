@@ -73,7 +73,12 @@
       "seoMarketing": "SEO & Marketing",
       "maintenance": "Onderhoud & Support",
       "migrations": "Migraties & Redesign",
-      "chatbots": "Chatbot Installatie"
+      "chatbots": "Chatbot Installatie",
+      "domainRegistration": "Domeinregistratie",
+      "webdesign": "Webdesign",
+      "webhosting": "Webhosting",
+      "websiteBuild": "Website Bouw",
+      "seo": "Zoekmachine-optimalisatie"
     },
     "company": {
       "title": "Bedrijf",
