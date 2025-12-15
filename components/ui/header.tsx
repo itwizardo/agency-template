@@ -9,6 +9,7 @@ import { useLanguage } from "@/lib/i18n";
 export default function Header() {
   const { t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   return (
     <header className="fixed z-30 w-full top-4 md:top-6 px-4">
@@ -31,24 +32,57 @@ export default function Header() {
             </div>
 
             {/* Desktop Navigation - right aligned */}
-            <nav className="hidden md:flex items-center gap-10">
+            <nav className="hidden md:flex items-center gap-8">
               <Link
                 href="/"
                 className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
               >
                 {t.header.home}
               </Link>
+
+              {/* Services Dropdown */}
+              <div
+                className="relative"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                <button className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-1">
+                  {t.footer.services.title}
+                  <svg className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {/* Dropdown Menu */}
+                <div className={`absolute top-full left-1/2 -translate-x-1/2 pt-4 transition-all duration-200 ${isServicesOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+                  <div className="bg-gray-900/95 backdrop-blur-xl rounded-xl border border-gray-700/50 p-2 min-w-[200px] shadow-xl">
+                    <Link href="/diensten/webdesign" className="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">
+                      {t.footer.services.webdesign}
+                    </Link>
+                    <Link href="/diensten/website-bouw" className="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">
+                      {t.footer.services.websiteBuild}
+                    </Link>
+                    <Link href="/diensten/webshop-ontwikkeling" className="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">
+                      {t.footer.services.ecommerceStrategy}
+                    </Link>
+                    <Link href="/diensten/zoekmachine-optimalisatie" className="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">
+                      {t.footer.services.seo}
+                    </Link>
+                    <Link href="/diensten/webhosting" className="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">
+                      {t.footer.services.webhosting}
+                    </Link>
+                    <Link href="/diensten/chatbots" className="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">
+                      {t.footer.services.chatbots}
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
               <Link
                 href="/portfolio"
                 className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
               >
                 {t.header.portfolio}
-              </Link>
-              <Link
-                href="/diensten/chatbots"
-                className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
-              >
-                {t.header.chatbots}
               </Link>
               <Link
                 href="/contact"
@@ -86,7 +120,7 @@ export default function Header() {
         {/* Mobile Menu */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMobileMenuOpen ? 'max-h-[400px] opacity-100 mt-3' : 'max-h-0 opacity-0 mt-0'
+            isMobileMenuOpen ? 'max-h-[600px] opacity-100 mt-3' : 'max-h-0 opacity-0 mt-0'
           }`}
         >
           <div className="relative">
@@ -103,19 +137,38 @@ export default function Header() {
                 >
                   {t.header.home}
                 </Link>
+
+                {/* Mobile Services Section */}
+                <div className="px-4 py-2">
+                  <p className="text-xs text-gray-500 uppercase tracking-wider mb-2">{t.footer.services.title}</p>
+                  <div className="grid grid-cols-2 gap-1">
+                    <Link href="/diensten/webdesign" className="py-2 px-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+                      {t.footer.services.webdesign}
+                    </Link>
+                    <Link href="/diensten/website-bouw" className="py-2 px-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+                      {t.footer.services.websiteBuild}
+                    </Link>
+                    <Link href="/diensten/webshop-ontwikkeling" className="py-2 px-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+                      {t.footer.services.ecommerceStrategy}
+                    </Link>
+                    <Link href="/diensten/zoekmachine-optimalisatie" className="py-2 px-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+                      {t.footer.services.seo}
+                    </Link>
+                    <Link href="/diensten/webhosting" className="py-2 px-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+                      {t.footer.services.webhosting}
+                    </Link>
+                    <Link href="/diensten/chatbots" className="py-2 px-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+                      {t.footer.services.chatbots}
+                    </Link>
+                  </div>
+                </div>
+
                 <Link
                   href="/portfolio"
                   className="px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl transition-all font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {t.header.portfolio}
-                </Link>
-                <Link
-                  href="/diensten/chatbots"
-                  className="px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl transition-all font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {t.header.chatbots}
                 </Link>
                 <Link
                   href="/over-ons"

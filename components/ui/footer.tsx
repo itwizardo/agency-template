@@ -32,22 +32,30 @@ export default function Footer({ border = false }: { border?: boolean }) {
             </div>
           </div>
 
-          {/* 2nd block - Diensten/Services */}
+          {/* 2nd block - Diensten/Services Column 1 */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
             <h3 className="text-sm font-medium text-gray-200">{t.footer.services.title}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   className="text-gray-400 transition hover:text-white"
-                  href="/diensten/webshop-ontwikkeling"
+                  href="/diensten/webdesign"
                 >
-                  {t.footer.services.webshopDevelopment}
+                  {t.footer.services.webdesign}
                 </Link>
               </li>
               <li>
                 <Link
                   className="text-gray-400 transition hover:text-white"
-                  href="/diensten/e-commerce-strategie"
+                  href="/diensten/website-bouw"
+                >
+                  {t.footer.services.websiteBuild}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-gray-400 transition hover:text-white"
+                  href="/diensten/webshop-ontwikkeling"
                 >
                   {t.footer.services.ecommerceStrategy}
                 </Link>
@@ -55,9 +63,40 @@ export default function Footer({ border = false }: { border?: boolean }) {
               <li>
                 <Link
                   className="text-gray-400 transition hover:text-white"
-                  href="/diensten/seo-marketing"
+                  href="/diensten/zoekmachine-optimalisatie"
                 >
-                  {t.footer.services.seoMarketing}
+                  {t.footer.services.seo}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-gray-400 transition hover:text-white"
+                  href="/diensten/chatbots"
+                >
+                  {t.footer.services.chatbots}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* 3rd block - Diensten/Services Column 2 */}
+          <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
+            <h3 className="text-sm font-medium text-gray-200 opacity-0 hidden lg:block">&nbsp;</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  className="text-gray-400 transition hover:text-white"
+                  href="/diensten/domeinregistratie"
+                >
+                  {t.footer.services.domainRegistration}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="text-gray-400 transition hover:text-white"
+                  href="/diensten/webhosting"
+                >
+                  {t.footer.services.webhosting}
                 </Link>
               </li>
               <li>
@@ -76,59 +115,11 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   {t.footer.services.migrations}
                 </Link>
               </li>
-              <li>
-                <Link
-                  className="text-gray-400 transition hover:text-white"
-                  href="/diensten/chatbots"
-                >
-                  {t.footer.services.chatbots}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-400 transition hover:text-white"
-                  href="/diensten/domeinregistratie"
-                >
-                  {t.footer.services.domainRegistration}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-400 transition hover:text-white"
-                  href="/diensten/webdesign"
-                >
-                  {t.footer.services.webdesign}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-400 transition hover:text-white"
-                  href="/diensten/webhosting"
-                >
-                  {t.footer.services.webhosting}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-400 transition hover:text-white"
-                  href="/diensten/website-bouw"
-                >
-                  {t.footer.services.websiteBuild}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-400 transition hover:text-white"
-                  href="/diensten/zoekmachine-optimalisatie"
-                >
-                  {t.footer.services.seo}
-                </Link>
-              </li>
             </ul>
           </div>
 
-          {/* 3rd block - Bedrijf/Company */}
-          <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
+          {/* 5th block - Bedrijf/Company */}
+          <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-1">
             <h3 className="text-sm font-medium text-gray-200">{t.footer.company.title}</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -174,8 +165,8 @@ export default function Footer({ border = false }: { border?: boolean }) {
             </ul>
           </div>
 
-          {/* 4th block - Hulpbronnen/Resources */}
-          <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
+          {/* 6th block - Hulpbronnen/Resources */}
+          <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-1">
             <h3 className="text-sm font-medium text-gray-200">{t.footer.resources.title}</h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -205,7 +196,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
             </ul>
           </div>
 
-          {/* 5th block - Social */}
+          {/* 7th block - Social */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
             <h3 className="text-sm font-medium text-gray-200">{t.footer.social.title}</h3>
             <ul className="flex gap-1">
