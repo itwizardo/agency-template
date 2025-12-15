@@ -43,34 +43,15 @@ export default function RootLayout({
           </LanguageProvider>
         </PHProvider>
 
-        {/* Botpress Chat Widget - Replace YOUR_BOT_ID with your actual Botpress bot ID */}
+        {/* Botpress Chat Widget */}
         <Script
-          src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"
+          src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"
           strategy="lazyOnload"
         />
-        <Script id="botpress-config" strategy="lazyOnload">
-          {`
-            window.botpress = window.botpress || {};
-            window.botpress.config = {
-              botId: "YOUR_BOT_ID",
-              clientId: "YOUR_CLIENT_ID",
-              hostUrl: "https://cdn.botpress.cloud/webchat/v2.2",
-              messagingUrl: "https://messaging.botpress.cloud",
-              botName: "GWC Assistant",
-              avatarUrl: "",
-              stylesheet: "",
-              showPoweredBy: false,
-              theme: "prism",
-              themeColor: "#2563EB",
-              useSessionStorage: true,
-              enableConversationDeletion: true,
-              showCloseButton: true,
-              closeOnEscape: true,
-              containerWidth: "100%25",
-              layoutWidth: "100%25"
-            };
-          `}
-        </Script>
+        <Script
+          src="https://files.bpcontent.cloud/2025/08/04/21/20250804214422-O7X7DHBH.js"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
