@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  fossbilling:
+    image: fossbilling/fossbilling:latest
+    container_name: fossbilling
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      - TZ=Europe/Amsterdam
+    volumes:
+      - fossbilling_data:/var/www/html
+    depends_on:
+      - db
+    networks:
+      - fossbilling_network
+
+  db:
+    image: mariadb:10.11
+    container_name: fossbilling_db
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD:-strongrootpassword}
+      - MYSQL_DATABASE=${DB_NAME:-fossbilling}
+      - MYSQL_USER=${DB_USER:-fossbilling}
+      - MYSQL_PASSWORD=${DB_PASSWORD:-strongpassword}
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - fossbilling_network
+
+volumes:
+  fossbilling_data:
+  db_data:
+
+networks:
+  fossbilling_network:
+    driver: bridge
