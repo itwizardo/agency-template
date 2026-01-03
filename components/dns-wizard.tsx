@@ -42,6 +42,16 @@ export default function DnsWizard() {
       },
       dkimNote: 'Haal de DKIM waarde op uit je Zoho Admin Panel → Email → Domain Settings → DKIM',
       instructions: 'Voeg deze records toe bij je domein provider (Cloudflare, TransIP, etc.)',
+      howTo: {
+        title: 'Hoe werkt het?',
+        steps: [
+          { title: 'Stap 1: Zoho Account', desc: 'Ga naar mail.zoho.eu en maak een account aan of log in' },
+          { title: 'Stap 2: Domein toevoegen', desc: 'Ga naar Zoho Admin Console → Mail → Domain → Add Domain' },
+          { title: 'Stap 3: DNS Records', desc: 'Voeg de onderstaande records toe bij je domein provider' },
+          { title: 'Stap 4: Verifiëren', desc: 'Klik in Zoho op "Verify" nadat je de records hebt toegevoegd' },
+        ],
+        tip: 'DNS wijzigingen kunnen tot 24 uur duren om te propageren, maar meestal is het binnen 5-30 minuten klaar.',
+      },
     },
     en: {
       title: 'Zoho DNS Wizard',
@@ -67,6 +77,16 @@ export default function DnsWizard() {
       },
       dkimNote: 'Get the DKIM value from your Zoho Admin Panel → Email → Domain Settings → DKIM',
       instructions: 'Add these records at your domain provider (Cloudflare, TransIP, etc.)',
+      howTo: {
+        title: 'How does it work?',
+        steps: [
+          { title: 'Step 1: Zoho Account', desc: 'Go to mail.zoho.eu and create an account or log in' },
+          { title: 'Step 2: Add Domain', desc: 'Go to Zoho Admin Console → Mail → Domain → Add Domain' },
+          { title: 'Step 3: DNS Records', desc: 'Add the records below at your domain provider' },
+          { title: 'Step 4: Verify', desc: 'Click "Verify" in Zoho after adding the records' },
+        ],
+        tip: 'DNS changes can take up to 24 hours to propagate, but usually it\'s ready within 5-30 minutes.',
+      },
     },
     de: {
       title: 'Zoho DNS Assistent',
@@ -92,6 +112,16 @@ export default function DnsWizard() {
       },
       dkimNote: 'DKIM-Wert aus Zoho Admin Panel → Email → Domain Settings → DKIM abrufen',
       instructions: 'Fügen Sie diese Einträge bei Ihrem Domain-Anbieter hinzu',
+      howTo: {
+        title: 'Wie funktioniert es?',
+        steps: [
+          { title: 'Schritt 1: Zoho Konto', desc: 'Gehen Sie zu mail.zoho.eu und erstellen Sie ein Konto oder melden Sie sich an' },
+          { title: 'Schritt 2: Domain hinzufügen', desc: 'Gehen Sie zu Zoho Admin Console → Mail → Domain → Add Domain' },
+          { title: 'Schritt 3: DNS-Einträge', desc: 'Fügen Sie die folgenden Einträge bei Ihrem Domain-Anbieter hinzu' },
+          { title: 'Schritt 4: Verifizieren', desc: 'Klicken Sie in Zoho auf "Verify" nachdem Sie die Einträge hinzugefügt haben' },
+        ],
+        tip: 'DNS-Änderungen können bis zu 24 Stunden dauern, aber normalerweise ist es innerhalb von 5-30 Minuten fertig.',
+      },
     },
     fr: {
       title: 'Assistant DNS Zoho',
@@ -117,6 +147,16 @@ export default function DnsWizard() {
       },
       dkimNote: 'Récupérez la valeur DKIM depuis Zoho Admin Panel → Email → Domain Settings → DKIM',
       instructions: 'Ajoutez ces enregistrements chez votre fournisseur de domaine',
+      howTo: {
+        title: 'Comment ça marche?',
+        steps: [
+          { title: 'Étape 1: Compte Zoho', desc: 'Allez sur mail.zoho.eu et créez un compte ou connectez-vous' },
+          { title: 'Étape 2: Ajouter le domaine', desc: 'Allez dans Zoho Admin Console → Mail → Domain → Add Domain' },
+          { title: 'Étape 3: Enregistrements DNS', desc: 'Ajoutez les enregistrements ci-dessous chez votre fournisseur de domaine' },
+          { title: 'Étape 4: Vérifier', desc: 'Cliquez sur "Verify" dans Zoho après avoir ajouté les enregistrements' },
+        ],
+        tip: 'Les changements DNS peuvent prendre jusqu\'à 24 heures pour se propager, mais généralement c\'est prêt en 5-30 minutes.',
+      },
     },
     es: {
       title: 'Asistente DNS Zoho',
@@ -142,6 +182,16 @@ export default function DnsWizard() {
       },
       dkimNote: 'Obtén el valor DKIM desde Zoho Admin Panel → Email → Domain Settings → DKIM',
       instructions: 'Agrega estos registros en tu proveedor de dominio',
+      howTo: {
+        title: '¿Cómo funciona?',
+        steps: [
+          { title: 'Paso 1: Cuenta Zoho', desc: 'Ve a mail.zoho.eu y crea una cuenta o inicia sesión' },
+          { title: 'Paso 2: Agregar dominio', desc: 'Ve a Zoho Admin Console → Mail → Domain → Add Domain' },
+          { title: 'Paso 3: Registros DNS', desc: 'Agrega los registros de abajo en tu proveedor de dominio' },
+          { title: 'Paso 4: Verificar', desc: 'Haz clic en "Verify" en Zoho después de agregar los registros' },
+        ],
+        tip: 'Los cambios DNS pueden tardar hasta 24 horas en propagarse, pero generalmente está listo en 5-30 minutos.',
+      },
     },
   };
 
@@ -244,6 +294,34 @@ export default function DnsWizard() {
 
   return (
     <div className="max-w-4xl mx-auto">
+      {/* How To Section */}
+      <div className="bg-gradient-to-br from-blue-900/30 to-gray-900/50 backdrop-blur-sm rounded-2xl border border-blue-700/30 p-8 mb-8">
+        <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+          <span className="text-3xl">📋</span> {t.howTo.title}
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-4 mb-6">
+          {t.howTo.steps.map((step, idx) => (
+            <div key={idx} className="flex gap-4 p-4 bg-gray-800/50 rounded-xl border border-gray-700/50">
+              <div className="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                {idx + 1}
+              </div>
+              <div>
+                <h4 className="font-semibold text-white mb-1">{step.title}</h4>
+                <p className="text-gray-400 text-sm">{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex items-start gap-3 p-4 bg-green-500/10 border border-green-500/30 rounded-xl">
+          <svg className="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <p className="text-green-400 text-sm">{t.howTo.tip}</p>
+        </div>
+      </div>
+
       {/* Input Form */}
       <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-8 mb-8">
         <h2 className="text-2xl font-bold text-white text-center mb-2">{t.title}</h2>
