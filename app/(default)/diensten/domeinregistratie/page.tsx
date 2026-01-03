@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/lib/i18n";
 import PageHeader from "@/components/page-header";
+import DomainSearch from "@/components/domain-search";
 
 export default function Domeinregistratie() {
   const { locale } = useLanguage();
@@ -111,8 +112,11 @@ export default function Domeinregistratie() {
       <section className="pb-12 md:pb-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="max-w-3xl mx-auto">
-            <p className="text-lg text-gray-300 mb-12">{t.intro}</p>
+            <p className="text-lg text-gray-300 mb-8">{t.intro}</p>
           </div>
+
+          {/* Domain Search */}
+          <DomainSearch />
 
           {/* Pricing Section */}
           <div className="mb-16">
