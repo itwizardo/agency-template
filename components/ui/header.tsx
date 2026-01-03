@@ -68,12 +68,6 @@ export default function Header() {
                     <Link href="/diensten/zoekmachine-optimalisatie" className="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">
                       {t.footer.services.seo}
                     </Link>
-                    <Link href="/diensten/webhosting" className="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">
-                      {t.footer.services.webhosting}
-                    </Link>
-                    <Link href="/diensten/domeinregistratie" className="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">
-                      {t.footer.services.domainRegistration}
-                    </Link>
                     <Link href="/diensten/chatbots" className="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors">
                       {t.footer.services.chatbots}
                     </Link>
@@ -179,12 +173,6 @@ export default function Header() {
                     </Link>
                     <Link href="/diensten/zoekmachine-optimalisatie" className="py-2 px-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                       {t.footer.services.seo}
-                    </Link>
-                    <Link href="/diensten/webhosting" className="py-2 px-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-                      {t.footer.services.webhosting}
-                    </Link>
-                    <Link href="/diensten/domeinregistratie" className="py-2 px-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-                      {t.footer.services.domainRegistration}
                     </Link>
                     <Link href="/diensten/chatbots" className="py-2 px-2 text-sm text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
                       {t.footer.services.chatbots}
