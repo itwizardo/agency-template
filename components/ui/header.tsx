@@ -82,6 +82,12 @@ export default function Header() {
               </div>
 
               <Link
+                href="/diensten/domeinregistratie"
+                className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
+              >
+                {t.footer.services.domainRegistration}
+              </Link>
+              <Link
                 href="/portfolio"
                 className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
               >
