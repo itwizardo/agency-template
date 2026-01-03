@@ -13,10 +13,10 @@
     "packages": "Pakete"
   },
   "hero": {
-    "badge": "Vertraut von 200+ Unternehmern",
-    "title": "Websites die performen,",
+    "badge": "Ihr kompletter digitaler Partner",
+    "title": "Digitale Lösungen die performen,",
     "titleHighlight": "nicht nur existieren",
-    "subtitle": "GWC erstellt professionelle Websites und Webshops für ambitionierte Unternehmer. Von Unternehmenswebsites bis kompletten Webshops, wir sind Ihr Partner für Online-Erfolg.",
+    "subtitle": "Von Websites und Webshops bis Chatbots und Marketing. GWC ist Ihr One-Stop-Shop für alles Online. Seit über 10 Jahren der Partner für ambitionierte Unternehmer.",
     "cta": "Kostenloses Strategiegespräch",
     "ctaSecondary": "Unsere Arbeit Ansehen"
   },
@@ -25,32 +25,32 @@
     "subtitle": "Integrationen mit allen beliebten Plattformen, CMS-Systemen und Zahlungsmethoden"
   },
   "features": {
-    "title": "Alles was Sie für Online-Erfolg brauchen",
-    "subtitle": "Vom Design bis zum Launch und laufender Optimierung - wir bieten komplette Web-Lösungen",
+    "title": "Ihr kompletter digitaler Partner",
+    "subtitle": "Von Websites bis Chatbots und Marketing - wir bieten alle digitalen Lösungen unter einem Dach",
     "items": [
       {
-        "title": "Maßgeschneidertes Webdesign",
-        "description": "Einzigartige, maßgeschneiderte Designs, die Ihre Marke perfekt widerspiegeln und Besucher in Kunden verwandeln."
+        "title": "Websites & Webshops",
+        "description": "Professionelle Websites und Webshops die konvertieren. Von einfachen Landingpages bis kompletten E-Commerce-Lösungen."
       },
       {
-        "title": "E-Commerce & Integrationen",
-        "description": "Webshops mit iDEAL, Mollie, PostNL und Verbindungen zu Buchhaltungssoftware und Lagersystemen."
+        "title": "Chatbots & KI",
+        "description": "Smarte Chatbots die Ihren Kunden 24/7 helfen. Automatisieren Sie den Kundenservice und generieren Sie mehr Leads."
       },
       {
-        "title": "SEO & Auffindbarkeit",
-        "description": "Technische SEO-Optimierung, damit Ihre Website von Ihren idealen Kunden bei Google gefunden wird."
+        "title": "Marketing & SEO",
+        "description": "Werden Sie von Ihren idealen Kunden gefunden. SEO, Google Ads und Social Media Marketing das Ergebnisse liefert."
       },
       {
-        "title": "Mobile-First Entwicklung",
-        "description": "Responsive Websites, die auf jedem Gerät perfekt funktionieren, vom Smartphone bis zum Desktop."
+        "title": "Domain & E-Mail",
+        "description": "Professionelle Domainnamen und geschäftliche E-Mail. Alles für eine zuverlässige Online-Identität."
       },
       {
-        "title": "Geschwindigkeit & Performance",
-        "description": "Blitzschnelle Ladezeiten für bessere Ergebnisse und höhere Suchmaschinen-Rankings."
+        "title": "Webhosting",
+        "description": "Schnelles und sicheres Hosting in niederländischen Rechenzentren. 99,9% Uptime und tägliche Backups."
       },
       {
         "title": "Support & Wartung",
-        "description": "Laufender Support, Updates und Optimierung, damit Ihre Website immer optimal performt."
+        "description": "Laufender Support, Updates und Optimierung, damit Ihre digitalen Lösungen immer optimal performen."
       }
     ]
   },
@@ -62,7 +62,7 @@
   },
   "cta": {
     "title": "Bereit online zu wachsen?",
-    "subtitle": "Planen Sie noch heute ein kostenloses Strategiegespräch und entdecken Sie, wie wir Ihre Website oder Ihren Webshop realisieren können.",
+    "subtitle": "Planen Sie noch heute ein kostenloses Strategiegespräch und entdecken Sie, welche digitalen Lösungen zu Ihrem Unternehmen passen.",
     "button": "Ihr Projekt Starten"
   },
   "footer": {

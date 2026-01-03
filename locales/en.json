@@ -13,10 +13,10 @@
     "packages": "Packages"
   },
   "hero": {
-    "badge": "Trusted by 200+ entrepreneurs",
-    "title": "Websites that perform,",
+    "badge": "Your complete digital partner",
+    "title": "Digital solutions that perform,",
     "titleHighlight": "not just exist",
-    "subtitle": "GWC builds professional websites and webshops for ambitious entrepreneurs. From business websites to complete webshops, we are your partner in online success.",
+    "subtitle": "From websites and webshops to chatbots and marketing. GWC is your one-stop-shop for everything online. Over 10 years the partner for ambitious entrepreneurs.",
     "cta": "Free Strategy Call",
     "ctaSecondary": "View Our Work"
   },
@@ -25,32 +25,32 @@
     "subtitle": "Integrations with all popular platforms, CMS systems and payment methods"
   },
   "features": {
-    "title": "Everything you need for online success",
-    "subtitle": "From design to launch and ongoing optimisation - we offer complete web solutions",
+    "title": "Your complete digital partner",
+    "subtitle": "From websites to chatbots and marketing - we offer all digital solutions under one roof",
     "items": [
       {
-        "title": "Custom Web Design",
-        "description": "Unique, tailor-made designs that perfectly reflect your brand and convert visitors into customers."
+        "title": "Websites & Webshops",
+        "description": "Professional websites and webshops that convert. From simple landing pages to complete e-commerce solutions."
       },
       {
-        "title": "E-commerce & Integrations",
-        "description": "Webshops with iDEAL, Mollie, PostNL and connections to accounting software and inventory systems."
+        "title": "Chatbots & AI",
+        "description": "Smart chatbots that help your customers 24/7. Automate customer service and generate more leads."
       },
       {
-        "title": "SEO & Discoverability",
-        "description": "Technical SEO optimisation so your website is found by your ideal customers on Google."
+        "title": "Marketing & SEO",
+        "description": "Get found by your ideal customers. SEO, Google Ads and social media marketing that delivers results."
       },
       {
-        "title": "Mobile-First Development",
-        "description": "Responsive websites that function perfectly on every device, from smartphone to desktop."
+        "title": "Domain & Email",
+        "description": "Professional domain names and business email. Everything for a reliable online identity."
       },
       {
-        "title": "Speed & Performance",
-        "description": "Lightning-fast loading times for better results and higher search engine rankings."
+        "title": "Web Hosting",
+        "description": "Fast and secure hosting in Dutch data centers. 99.9% uptime and daily backups."
       },
       {
         "title": "Support & Maintenance",
-        "description": "Ongoing support, updates and optimisation to ensure your website always performs at its best."
+        "description": "Ongoing support, updates and optimisation to ensure your digital solutions always perform at their best."
       }
     ]
   },
@@ -62,7 +62,7 @@
   },
   "cta": {
     "title": "Ready to grow online?",
-    "subtitle": "Schedule a free strategy call today and discover how we can build your website or webshop.",
+    "subtitle": "Schedule a free strategy call today and discover which digital solutions fit your business.",
     "button": "Start Your Project"
   },
   "footer": {

@@ -13,10 +13,10 @@
     "packages": "Paquetes"
   },
   "hero": {
-    "badge": "Confiado por más de 200 emprendedores",
-    "title": "Sitios web que rinden,",
+    "badge": "Su socio digital completo",
+    "title": "Soluciones digitales que rinden,",
     "titleHighlight": "no solo existen",
-    "subtitle": "GWC crea sitios web y tiendas online profesionales para emprendedores ambiciosos. Desde sitios corporativos hasta tiendas completas, somos su socio para el éxito online.",
+    "subtitle": "Desde sitios web y tiendas online hasta chatbots y marketing. GWC es su ventanilla única para todo lo online. Más de 10 años siendo el socio de emprendedores ambiciosos.",
     "cta": "Llamada Estratégica Gratis",
     "ctaSecondary": "Ver Nuestro Trabajo"
   },
@@ -25,32 +25,32 @@
     "subtitle": "Integraciones con todas las plataformas populares, sistemas CMS y métodos de pago"
   },
   "features": {
-    "title": "Todo lo que necesitas para el éxito online",
-    "subtitle": "Desde el diseño hasta el lanzamiento y la optimización continua - ofrecemos soluciones web completas",
+    "title": "Su socio digital completo",
+    "subtitle": "Desde sitios web hasta chatbots y marketing - ofrecemos todas las soluciones digitales bajo un mismo techo",
     "items": [
       {
-        "title": "Diseño Web Personalizado",
-        "description": "Diseños únicos y a medida que reflejan perfectamente tu marca y convierten visitantes en clientes."
+        "title": "Sitios Web y Tiendas",
+        "description": "Sitios web y tiendas profesionales que convierten. Desde landing pages simples hasta soluciones e-commerce completas."
       },
       {
-        "title": "E-Commerce e Integraciones",
-        "description": "Tiendas con iDEAL, Mollie, PostNL y conexiones con software de contabilidad y sistemas de inventario."
+        "title": "Chatbots e IA",
+        "description": "Chatbots inteligentes que ayudan a sus clientes 24/7. Automatice el servicio al cliente y genere más leads."
       },
       {
-        "title": "SEO y Visibilidad",
-        "description": "Optimización SEO técnica para que tu sitio sea encontrado por tus clientes ideales en Google."
+        "title": "Marketing y SEO",
+        "description": "Sea encontrado por sus clientes ideales. SEO, Google Ads y marketing en redes sociales que da resultados."
       },
       {
-        "title": "Desarrollo Mobile-First",
-        "description": "Sitios responsivos que funcionan perfectamente en cualquier dispositivo, desde smartphone hasta desktop."
+        "title": "Dominio y Email",
+        "description": "Nombres de dominio profesionales y email empresarial. Todo para una identidad online confiable."
       },
       {
-        "title": "Velocidad y Rendimiento",
-        "description": "Tiempos de carga ultrarrápidos para mejores resultados y rankings más altos en buscadores."
+        "title": "Alojamiento Web",
+        "description": "Hosting rápido y seguro en centros de datos holandeses. 99.9% de disponibilidad y backups diarios."
       },
       {
         "title": "Soporte y Mantenimiento",
-        "description": "Soporte continuo, actualizaciones y optimización para que tu sitio siempre rinda al máximo."
+        "description": "Soporte continuo, actualizaciones y optimización para que sus soluciones digitales siempre rindan al máximo."
       }
     ]
   },
@@ -62,7 +62,7 @@
   },
   "cta": {
     "title": "¿Listo para crecer online?",
-    "subtitle": "Programa una llamada estratégica gratis hoy y descubre cómo podemos crear tu sitio web o tienda online.",
+    "subtitle": "Programa una llamada estratégica gratis hoy y descubre qué soluciones digitales se adaptan a tu negocio.",
     "button": "Iniciar Tu Proyecto"
   },
   "footer": {

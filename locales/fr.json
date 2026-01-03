@@ -13,10 +13,10 @@
     "packages": "Forfaits"
   },
   "hero": {
-    "badge": "Approuvé par plus de 200 entrepreneurs",
-    "title": "Des sites web qui performent,",
+    "badge": "Votre partenaire digital complet",
+    "title": "Des solutions digitales qui performent,",
     "titleHighlight": "pas seulement existent",
-    "subtitle": "GWC crée des sites web et boutiques en ligne professionnels pour les entrepreneurs ambitieux. Du site d'entreprise à la boutique complète, nous sommes votre partenaire pour le succès en ligne.",
+    "subtitle": "Des sites web et boutiques aux chatbots et marketing. GWC est votre guichet unique pour tout ce qui est en ligne. Depuis plus de 10 ans le partenaire des entrepreneurs ambitieux.",
     "cta": "Appel Stratégique Gratuit",
     "ctaSecondary": "Voir Nos Réalisations"
   },
@@ -25,32 +25,32 @@
     "subtitle": "Intégrations avec toutes les plateformes populaires, systèmes CMS et méthodes de paiement"
   },
   "features": {
-    "title": "Tout ce dont vous avez besoin pour réussir en ligne",
-    "subtitle": "De la conception au lancement et à l'optimisation continue - nous offrons des solutions web complètes",
+    "title": "Votre partenaire digital complet",
+    "subtitle": "Des sites web aux chatbots et marketing - nous offrons toutes les solutions digitales sous un même toit",
     "items": [
       {
-        "title": "Design Web Sur Mesure",
-        "description": "Des designs uniques et personnalisés qui reflètent parfaitement votre marque et convertissent les visiteurs en clients."
+        "title": "Sites Web & Boutiques",
+        "description": "Sites web et boutiques professionnels qui convertissent. Des landing pages simples aux solutions e-commerce complètes."
       },
       {
-        "title": "E-Commerce & Intégrations",
-        "description": "Boutiques avec iDEAL, Mollie, PostNL et connexions aux logiciels de comptabilité et systèmes d'inventaire."
+        "title": "Chatbots & IA",
+        "description": "Chatbots intelligents qui aident vos clients 24/7. Automatisez le service client et générez plus de leads."
       },
       {
-        "title": "SEO & Visibilité",
-        "description": "Optimisation SEO technique pour que votre site soit trouvé par vos clients idéaux sur Google."
+        "title": "Marketing & SEO",
+        "description": "Soyez trouvé par vos clients idéaux. SEO, Google Ads et marketing sur les réseaux sociaux qui donne des résultats."
       },
       {
-        "title": "Développement Mobile-First",
-        "description": "Sites responsives qui fonctionnent parfaitement sur tous les appareils, du smartphone au desktop."
+        "title": "Domaine & Email",
+        "description": "Noms de domaine professionnels et email professionnel. Tout pour une identité en ligne fiable."
       },
       {
-        "title": "Vitesse & Performance",
-        "description": "Temps de chargement ultra-rapides pour de meilleurs résultats et un meilleur classement dans les moteurs de recherche."
+        "title": "Hébergement Web",
+        "description": "Hébergement rapide et sécurisé dans des centres de données néerlandais. 99,9% de disponibilité et sauvegardes quotidiennes."
       },
       {
         "title": "Support & Maintenance",
-        "description": "Support continu, mises à jour et optimisation pour que votre site performe toujours au maximum."
+        "description": "Support continu, mises à jour et optimisation pour que vos solutions digitales performent toujours au maximum."
       }
     ]
   },
@@ -62,7 +62,7 @@
   },
   "cta": {
     "title": "Prêt à croître en ligne ?",
-    "subtitle": "Planifiez un appel stratégique gratuit aujourd'hui et découvrez comment nous pouvons réaliser votre site web ou boutique.",
+    "subtitle": "Planifiez un appel stratégique gratuit aujourd'hui et découvrez quelles solutions digitales conviennent à votre entreprise.",
     "button": "Démarrer Votre Projet"
   },
   "footer": {

@@ -13,10 +13,10 @@
     "packages": "Pakketten"
   },
   "hero": {
-    "badge": "Vertrouwd door 200+ ondernemers",
-    "title": "Websites die presteren,",
+    "badge": "Uw complete digitale partner",
+    "title": "Digitale oplossingen die presteren,",
     "titleHighlight": "niet alleen bestaan",
-    "subtitle": "GWC bouwt professionele websites en webshops voor ambitieuze ondernemers. Van bedrijfswebsite tot complete webshop, wij zijn uw partner in online succes.",
+    "subtitle": "Van websites en webshops tot chatbots en marketing. GWC is uw one-stop-shop voor alles online. Al meer dan 10 jaar de partner voor ambitieuze ondernemers.",
     "cta": "Gratis Strategiegesprek",
     "ctaSecondary": "Bekijk Ons Werk"
   },
@@ -25,32 +25,32 @@
     "subtitle": "Integraties met alle populaire platformen, CMS-systemen en betaalmethoden"
   },
   "features": {
-    "title": "Alles wat u nodig heeft voor online succes",
-    "subtitle": "Van ontwerp tot lancering en doorlopende optimalisatie - wij bieden complete web oplossingen",
+    "title": "Uw complete digitale partner",
+    "subtitle": "Van websites tot chatbots en marketing - wij bieden alle digitale oplossingen onder één dak",
     "items": [
       {
-        "title": "Maatwerk Web Design",
-        "description": "Unieke, op maat gemaakte designs die uw merk perfect weerspiegelen en bezoekers omzetten in klanten."
+        "title": "Websites & Webshops",
+        "description": "Professionele websites en webshops die converteren. Van eenvoudige landingspagina tot complete e-commerce oplossing."
       },
       {
-        "title": "E-commerce & Integraties",
-        "description": "Webshops met iDEAL, Mollie, PostNL en koppelingen met boekhoudsoftware en voorraadsystemen."
+        "title": "Chatbots & AI",
+        "description": "Slimme chatbots die 24/7 uw klanten helpen. Automatiseer klantenservice en genereer meer leads."
       },
       {
-        "title": "SEO & Vindbaarheid",
-        "description": "Technische SEO-optimalisatie zodat uw website gevonden wordt door uw ideale klanten in Google."
+        "title": "Marketing & SEO",
+        "description": "Word gevonden door uw ideale klanten. SEO, Google Ads en social media marketing die resultaat levert."
       },
       {
-        "title": "Mobiel-First Ontwikkeling",
-        "description": "Responsive websites die perfect functioneren op elk apparaat, van smartphone tot desktop."
+        "title": "Domein & Email",
+        "description": "Professionele domeinnamen en zakelijke email. Alles voor een betrouwbare online identiteit."
       },
       {
-        "title": "Snelheid & Performance",
-        "description": "Razendsnelle laadtijden voor betere resultaten en hogere rankings in zoekmachines."
+        "title": "Webhosting",
+        "description": "Snelle en veilige hosting in Nederlandse datacenters. 99.9% uptime en dagelijkse backups."
       },
       {
         "title": "Support & Onderhoud",
-        "description": "Doorlopende ondersteuning, updates en optimalisatie zodat uw website altijd top presteert."
+        "description": "Doorlopende ondersteuning, updates en optimalisatie zodat uw digitale oplossingen altijd top presteren."
       }
     ]
   },
@@ -62,7 +62,7 @@
   },
   "cta": {
     "title": "Klaar om online te groeien?",
-    "subtitle": "Plan vandaag nog een gratis strategiegesprek en ontdek hoe wij uw website of webshop kunnen realiseren.",
+    "subtitle": "Plan vandaag nog een gratis strategiegesprek en ontdek welke digitale oplossingen bij uw bedrijf passen.",
     "button": "Start Uw Project"
   },
   "footer": {
