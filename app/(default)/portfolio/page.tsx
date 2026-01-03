@@ -18,12 +18,18 @@ export default function Portfolio() {
         { name: "Bestelappje", category: "Bestel Platform", result: "Online Bestellen", image: "/GJPortfolio/bestelappje.com.png", link: "https://bestelappje.com" },
         { name: "Kalina Holding", category: "Corporate Website", result: "Bedrijfswebsite", image: "/GJPortfolio/kalina-holding.com.png", link: "https://kalina-holding.com" },
         { name: "Trafion AG", category: "Business Platform", result: "B2B Oplossing", image: "/GJPortfolio/trafion.ag.png", link: "https://trafion.ag" },
+        { name: "De Gouden Lepel", category: "Restaurant", result: "Reserveringssysteem", image: "", link: "#", confidential: true },
+        { name: "MedCare Kliniek", category: "Gezondheidszorg", result: "Patiëntenportaal", image: "", link: "#", confidential: true },
+        { name: "Urban Style", category: "Fashion Webshop", result: "Multi-vendor Platform", image: "", link: "#", confidential: true },
+        { name: "Vastgoed Plus", category: "Makelaardij", result: "Woningplatform", image: "", link: "#", confidential: true },
+        { name: "EventPro", category: "Evenementen", result: "Ticketing Systeem", image: "", link: "#", confidential: true },
         { name: "Soccer Science", category: "Sport Platform", result: "Voetbal Analytics", image: "/GJPortfolio/soccerscience.jpg", link: "#", inDevelopment: true },
         { name: "Barrios Golf", category: "Golf Coaching", result: "Persoonlijke Training", image: "/GJPortfolio/Bariosgolf.png", link: "https://barriosgolf.com", inDevelopment: true },
       ],
       cta: "Bespreek uw project",
       visitSite: "Klik hier",
       inDevelopment: "In ontwikkeling",
+      confidential: "Vertrouwelijk project",
     },
     en: {
       title: "Portfolio",
@@ -35,12 +41,18 @@ export default function Portfolio() {
         { name: "Bestelappje", category: "Order Platform", result: "Online Ordering", image: "/GJPortfolio/bestelappje.com.png", link: "https://bestelappje.com" },
         { name: "Kalina Holding", category: "Corporate Website", result: "Company Website", image: "/GJPortfolio/kalina-holding.com.png", link: "https://kalina-holding.com" },
         { name: "Trafion AG", category: "Business Platform", result: "B2B Solution", image: "/GJPortfolio/trafion.ag.png", link: "https://trafion.ag" },
+        { name: "De Gouden Lepel", category: "Restaurant", result: "Reservation System", image: "", link: "#", confidential: true },
+        { name: "MedCare Clinic", category: "Healthcare", result: "Patient Portal", image: "", link: "#", confidential: true },
+        { name: "Urban Style", category: "Fashion Webshop", result: "Multi-vendor Platform", image: "", link: "#", confidential: true },
+        { name: "Vastgoed Plus", category: "Real Estate", result: "Property Platform", image: "", link: "#", confidential: true },
+        { name: "EventPro", category: "Events", result: "Ticketing System", image: "", link: "#", confidential: true },
         { name: "Soccer Science", category: "Sports Platform", result: "Football Analytics", image: "/GJPortfolio/soccerscience.jpg", link: "#", inDevelopment: true },
         { name: "Barrios Golf", category: "Golf Coaching", result: "Personal Training", image: "/GJPortfolio/Bariosgolf.png", link: "https://barriosgolf.com", inDevelopment: true },
       ],
       cta: "Discuss your project",
       visitSite: "Click here",
       inDevelopment: "In development",
+      confidential: "Confidential project",
     },
     de: {
       title: "Portfolio",
@@ -52,12 +64,18 @@ export default function Portfolio() {
         { name: "Bestelappje", category: "Bestell-Plattform", result: "Online-Bestellung", image: "/GJPortfolio/bestelappje.com.png", link: "https://bestelappje.com" },
         { name: "Kalina Holding", category: "Unternehmenswebsite", result: "Firmenwebsite", image: "/GJPortfolio/kalina-holding.com.png", link: "https://kalina-holding.com" },
         { name: "Trafion AG", category: "Business-Plattform", result: "B2B-Lösung", image: "/GJPortfolio/trafion.ag.png", link: "https://trafion.ag" },
+        { name: "De Gouden Lepel", category: "Restaurant", result: "Reservierungssystem", image: "", link: "#", confidential: true },
+        { name: "MedCare Klinik", category: "Gesundheitswesen", result: "Patientenportal", image: "", link: "#", confidential: true },
+        { name: "Urban Style", category: "Mode-Webshop", result: "Multi-Vendor Plattform", image: "", link: "#", confidential: true },
+        { name: "Vastgoed Plus", category: "Immobilien", result: "Immobilienplattform", image: "", link: "#", confidential: true },
+        { name: "EventPro", category: "Veranstaltungen", result: "Ticketing-System", image: "", link: "#", confidential: true },
         { name: "Soccer Science", category: "Sport-Plattform", result: "Fußball-Analytics", image: "/GJPortfolio/soccerscience.jpg", link: "#", inDevelopment: true },
         { name: "Barrios Golf", category: "Golf-Coaching", result: "Persönliches Training", image: "/GJPortfolio/Bariosgolf.png", link: "https://barriosgolf.com", inDevelopment: true },
       ],
       cta: "Besprechen Sie Ihr Projekt",
       visitSite: "Hier klicken",
       inDevelopment: "In Entwicklung",
+      confidential: "Vertrauliches Projekt",
     },
     fr: {
       title: "Portfolio",
@@ -69,12 +87,18 @@ export default function Portfolio() {
         { name: "Bestelappje", category: "Plateforme de commande", result: "Commande en ligne", image: "/GJPortfolio/bestelappje.com.png", link: "https://bestelappje.com" },
         { name: "Kalina Holding", category: "Site d'entreprise", result: "Site corporatif", image: "/GJPortfolio/kalina-holding.com.png", link: "https://kalina-holding.com" },
         { name: "Trafion AG", category: "Plateforme business", result: "Solution B2B", image: "/GJPortfolio/trafion.ag.png", link: "https://trafion.ag" },
+        { name: "De Gouden Lepel", category: "Restaurant", result: "Système de réservation", image: "", link: "#", confidential: true },
+        { name: "MedCare Clinique", category: "Santé", result: "Portail patient", image: "", link: "#", confidential: true },
+        { name: "Urban Style", category: "Mode e-commerce", result: "Plateforme multi-vendeur", image: "", link: "#", confidential: true },
+        { name: "Vastgoed Plus", category: "Immobilier", result: "Plateforme immobilière", image: "", link: "#", confidential: true },
+        { name: "EventPro", category: "Événements", result: "Système de billetterie", image: "", link: "#", confidential: true },
         { name: "Soccer Science", category: "Plateforme sportive", result: "Analyses football", image: "/GJPortfolio/soccerscience.jpg", link: "#", inDevelopment: true },
         { name: "Barrios Golf", category: "Coaching Golf", result: "Formation personnelle", image: "/GJPortfolio/Bariosgolf.png", link: "https://barriosgolf.com", inDevelopment: true },
       ],
       cta: "Discutons de votre projet",
       visitSite: "Cliquez ici",
       inDevelopment: "En développement",
+      confidential: "Projet confidentiel",
     },
     es: {
       title: "Portafolio",
@@ -86,12 +110,18 @@ export default function Portfolio() {
         { name: "Bestelappje", category: "Plataforma de pedidos", result: "Pedidos en línea", image: "/GJPortfolio/bestelappje.com.png", link: "https://bestelappje.com" },
         { name: "Kalina Holding", category: "Sitio corporativo", result: "Sitio de empresa", image: "/GJPortfolio/kalina-holding.com.png", link: "https://kalina-holding.com" },
         { name: "Trafion AG", category: "Plataforma de negocios", result: "Solución B2B", image: "/GJPortfolio/trafion.ag.png", link: "https://trafion.ag" },
+        { name: "De Gouden Lepel", category: "Restaurante", result: "Sistema de reservas", image: "", link: "#", confidential: true },
+        { name: "MedCare Clínica", category: "Salud", result: "Portal de pacientes", image: "", link: "#", confidential: true },
+        { name: "Urban Style", category: "Moda e-commerce", result: "Plataforma multi-vendedor", image: "", link: "#", confidential: true },
+        { name: "Vastgoed Plus", category: "Inmobiliaria", result: "Plataforma inmobiliaria", image: "", link: "#", confidential: true },
+        { name: "EventPro", category: "Eventos", result: "Sistema de tickets", image: "", link: "#", confidential: true },
         { name: "Soccer Science", category: "Plataforma deportiva", result: "Análisis de fútbol", image: "/GJPortfolio/soccerscience.jpg", link: "#", inDevelopment: true },
         { name: "Barrios Golf", category: "Coaching de Golf", result: "Entrenamiento personal", image: "/GJPortfolio/Bariosgolf.png", link: "https://barriosgolf.com", inDevelopment: true },
       ],
       cta: "Hablemos de su proyecto",
       visitSite: "Clic aquí",
       inDevelopment: "En desarrollo",
+      confidential: "Proyecto confidencial",
     },
   };
 
@@ -108,14 +138,15 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {t.projects.map((project, index) => {
               const isInDevelopment = project.inDevelopment;
-              const CardWrapper = isInDevelopment ? 'div' : 'a';
-              const cardProps = isInDevelopment
-                ? {}
-                : {
+              const hasValidLink = project.link && project.link !== "#";
+              const CardWrapper = hasValidLink ? 'a' : 'div';
+              const cardProps = hasValidLink
+                ? {
                     href: project.link,
                     target: "_blank",
                     rel: "noopener noreferrer"
-                  };
+                  }
+                : {};
 
               return (
                 <CardWrapper
@@ -124,12 +155,23 @@ export default function Portfolio() {
                   className="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 overflow-hidden group hover:border-blue-500/50 transition-all"
                 >
                   <div className="aspect-video relative bg-gray-900">
-                    <Image
-                      src={project.image}
-                      alt={project.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                    {project.image ? (
+                      <Image
+                        src={project.image}
+                        alt={project.name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-gray-800 to-purple-900/50 flex items-center justify-center">
+                        <div className="text-center">
+                          <svg className="w-16 h-16 mx-auto text-gray-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                          </svg>
+                          <span className="text-gray-500 text-sm font-medium">{t.confidential}</span>
+                        </div>
+                      </div>
+                    )}
                   </div>
                   <div className="p-6">
                     <span className="text-sm text-blue-400 font-medium">{project.category}</span>
@@ -140,21 +182,24 @@ export default function Portfolio() {
                       </svg>
                       <span className="font-medium">{project.result}</span>
                     </div>
-                    {isInDevelopment ? (
-                      <div className="inline-flex items-center text-orange-400 font-medium">
-                        <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>{t.inDevelopment}</span>
-                      </div>
-                    ) : (
-                      <div className="inline-flex items-center text-blue-400 font-medium group-hover:text-blue-300">
-                        <span>{t.visitSite}</span>
-                        <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </div>
-                    )}
+                    <div className="flex items-center justify-between">
+                      {isInDevelopment && (
+                        <div className="inline-flex items-center text-orange-400 font-medium">
+                          <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          <span>{t.inDevelopment}</span>
+                        </div>
+                      )}
+                      {hasValidLink && (
+                        <div className="inline-flex items-center text-blue-400 font-medium group-hover:text-blue-300">
+                          <span>{t.visitSite}</span>
+                          <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </CardWrapper>
               );
