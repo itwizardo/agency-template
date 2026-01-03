@@ -11,6 +11,9 @@ export default function Domeinregistratie() {
       title: "Domeinregistratie",
       subtitle: "Uw perfecte domeinnaam veiligstellen",
       intro: "Een sterke domeinnaam is de basis van uw online identiteit. Wij helpen u bij het kiezen en registreren van de perfecte domeinnaam die past bij uw merk en gemakkelijk te onthouden is voor uw klanten.",
+      pricingTitle: "Domein Prijzen",
+      pricingSubtitle: "Transparante prijzen, geen verborgen kosten",
+      perYear: "/jaar",
       features: [
         { title: "Breed Aanbod TLD's", desc: "Registreer .nl, .com, .eu, .be en vele andere extensies voor uw domein" },
         { title: "Directe Activatie", desc: "Uw domein is binnen enkele minuten actief en klaar voor gebruik" },
@@ -25,6 +28,9 @@ export default function Domeinregistratie() {
       title: "Domain Registration",
       subtitle: "Secure your perfect domain name",
       intro: "A strong domain name is the foundation of your online identity. We help you choose and register the perfect domain name that fits your brand and is easy for your customers to remember.",
+      pricingTitle: "Domain Pricing",
+      pricingSubtitle: "Transparent pricing, no hidden costs",
+      perYear: "/year",
       features: [
         { title: "Wide Range of TLDs", desc: "Register .nl, .com, .eu, .be and many other extensions for your domain" },
         { title: "Instant Activation", desc: "Your domain is active and ready to use within minutes" },
@@ -39,6 +45,9 @@ export default function Domeinregistratie() {
       title: "Domainregistrierung",
       subtitle: "Sichern Sie sich Ihren perfekten Domainnamen",
       intro: "Ein starker Domainname ist die Grundlage Ihrer Online-Identität. Wir helfen Ihnen bei der Auswahl und Registrierung des perfekten Domainnamens, der zu Ihrer Marke passt und für Ihre Kunden leicht zu merken ist.",
+      pricingTitle: "Domain Preise",
+      pricingSubtitle: "Transparente Preise, keine versteckten Kosten",
+      perYear: "/Jahr",
       features: [
         { title: "Breites Angebot an TLDs", desc: "Registrieren Sie .nl, .com, .eu, .be und viele andere Erweiterungen" },
         { title: "Sofortige Aktivierung", desc: "Ihre Domain ist innerhalb weniger Minuten aktiv und einsatzbereit" },
@@ -53,6 +62,9 @@ export default function Domeinregistratie() {
       title: "Enregistrement de Domaine",
       subtitle: "Sécurisez votre nom de domaine parfait",
       intro: "Un nom de domaine fort est la base de votre identité en ligne. Nous vous aidons à choisir et enregistrer le nom de domaine parfait qui correspond à votre marque et est facile à retenir pour vos clients.",
+      pricingTitle: "Prix des Domaines",
+      pricingSubtitle: "Prix transparents, pas de frais cachés",
+      perYear: "/an",
       features: [
         { title: "Large Gamme de TLDs", desc: "Enregistrez .nl, .com, .eu, .be et de nombreuses autres extensions" },
         { title: "Activation Instantanée", desc: "Votre domaine est actif et prêt à l'emploi en quelques minutes" },
@@ -67,6 +79,9 @@ export default function Domeinregistratie() {
       title: "Registro de Dominio",
       subtitle: "Asegure su nombre de dominio perfecto",
       intro: "Un nombre de dominio fuerte es la base de su identidad en línea. Le ayudamos a elegir y registrar el nombre de dominio perfecto que se ajuste a su marca y sea fácil de recordar para sus clientes.",
+      pricingTitle: "Precios de Dominios",
+      pricingSubtitle: "Precios transparentes, sin costos ocultos",
+      perYear: "/año",
       features: [
         { title: "Amplia Gama de TLDs", desc: "Registre .nl, .com, .eu, .be y muchas otras extensiones" },
         { title: "Activación Instantánea", desc: "Su dominio está activo y listo para usar en minutos" },
@@ -79,6 +94,15 @@ export default function Domeinregistratie() {
     },
   };
 
+  const pricing = [
+    { tld: ".nl", price: "9,99" },
+    { tld: ".com", price: "12,99" },
+    { tld: ".eu", price: "8,99" },
+    { tld: ".be", price: "10,99" },
+    { tld: ".de", price: "11,99" },
+    { tld: ".net", price: "14,99" },
+  ];
+
   const t = content[locale];
 
   return (
@@ -89,6 +113,24 @@ export default function Domeinregistratie() {
           <div className="max-w-3xl mx-auto">
             <p className="text-lg text-gray-300 mb-12">{t.intro}</p>
           </div>
+
+          {/* Pricing Section */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold text-white text-center mb-2">{t.pricingTitle}</h2>
+            <p className="text-gray-400 text-center mb-8">{t.pricingSubtitle}</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {pricing.map((item, index) => (
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 text-center hover:border-blue-500/50 transition-colors">
+                  <div className="text-2xl font-bold text-blue-400 mb-1">{item.tld}</div>
+                  <div className="text-white">
+                    <span className="text-xl font-semibold">€{item.price}</span>
+                    <span className="text-gray-400 text-sm">{t.perYear}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {t.features.map((feature, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50">

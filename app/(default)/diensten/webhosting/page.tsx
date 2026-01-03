@@ -11,6 +11,10 @@ export default function Webhosting() {
       title: "Webhosting",
       subtitle: "Betrouwbare hosting voor uw website",
       intro: "Snelle, veilige en betrouwbare webhosting is essentieel voor het succes van uw website. Onze hostingoplossingen bieden uitstekende uptime, snelle laadtijden en 24/7 ondersteuning zodat uw website altijd online is.",
+      pricingTitle: "Hosting Pakketten",
+      pricingSubtitle: "Kies het pakket dat bij u past",
+      perMonth: "/maand",
+      popular: "Populair",
       features: [
         { title: "99.9% Uptime Garantie", desc: "Uw website is altijd bereikbaar dankzij onze betrouwbare infrastructuur" },
         { title: "SSD Opslag", desc: "Razendsnelle SSD-schijven voor optimale website prestaties" },
@@ -19,12 +23,21 @@ export default function Webhosting() {
         { title: "24/7 Monitoring", desc: "Continue monitoring van uw website en server" },
         { title: "Schaalbare Oplossingen", desc: "Eenvoudig opschalen naarmate uw website groeit" },
       ],
-      cta: "Bekijk Hosting Pakketten",
+      packages: [
+        { name: "Starter", price: "4,99", storage: "10 GB SSD", websites: "1 Website", email: "5 E-mail accounts", bandwidth: "Onbeperkt verkeer" },
+        { name: "Business", price: "9,99", storage: "50 GB SSD", websites: "5 Websites", email: "25 E-mail accounts", bandwidth: "Onbeperkt verkeer", popular: true },
+        { name: "Premium", price: "19,99", storage: "100 GB SSD", websites: "Onbeperkt", email: "Onbeperkt e-mail", bandwidth: "Onbeperkt verkeer" },
+      ],
+      cta: "Pakket Kiezen",
     },
     en: {
       title: "Web Hosting",
       subtitle: "Reliable hosting for your website",
       intro: "Fast, secure, and reliable web hosting is essential for your website's success. Our hosting solutions offer excellent uptime, fast loading times, and 24/7 support so your website is always online.",
+      pricingTitle: "Hosting Packages",
+      pricingSubtitle: "Choose the package that suits you",
+      perMonth: "/month",
+      popular: "Popular",
       features: [
         { title: "99.9% Uptime Guarantee", desc: "Your website is always accessible thanks to our reliable infrastructure" },
         { title: "SSD Storage", desc: "Lightning-fast SSD drives for optimal website performance" },
@@ -33,12 +46,21 @@ export default function Webhosting() {
         { title: "24/7 Monitoring", desc: "Continuous monitoring of your website and server" },
         { title: "Scalable Solutions", desc: "Easily scale up as your website grows" },
       ],
-      cta: "View Hosting Packages",
+      packages: [
+        { name: "Starter", price: "4,99", storage: "10 GB SSD", websites: "1 Website", email: "5 Email accounts", bandwidth: "Unlimited traffic" },
+        { name: "Business", price: "9,99", storage: "50 GB SSD", websites: "5 Websites", email: "25 Email accounts", bandwidth: "Unlimited traffic", popular: true },
+        { name: "Premium", price: "19,99", storage: "100 GB SSD", websites: "Unlimited", email: "Unlimited email", bandwidth: "Unlimited traffic" },
+      ],
+      cta: "Choose Package",
     },
     de: {
       title: "Webhosting",
       subtitle: "Zuverlässiges Hosting für Ihre Website",
       intro: "Schnelles, sicheres und zuverlässiges Webhosting ist entscheidend für den Erfolg Ihrer Website. Unsere Hosting-Lösungen bieten exzellente Verfügbarkeit, schnelle Ladezeiten und 24/7 Support.",
+      pricingTitle: "Hosting-Pakete",
+      pricingSubtitle: "Wählen Sie das passende Paket",
+      perMonth: "/Monat",
+      popular: "Beliebt",
       features: [
         { title: "99,9% Verfügbarkeitsgarantie", desc: "Ihre Website ist dank unserer zuverlässigen Infrastruktur immer erreichbar" },
         { title: "SSD-Speicher", desc: "Blitzschnelle SSD-Laufwerke für optimale Website-Leistung" },
@@ -47,12 +69,21 @@ export default function Webhosting() {
         { title: "24/7 Überwachung", desc: "Kontinuierliche Überwachung Ihrer Website und Ihres Servers" },
         { title: "Skalierbare Lösungen", desc: "Einfach skalieren, wenn Ihre Website wächst" },
       ],
-      cta: "Hosting-Pakete Ansehen",
+      packages: [
+        { name: "Starter", price: "4,99", storage: "10 GB SSD", websites: "1 Website", email: "5 E-Mail-Konten", bandwidth: "Unbegrenzter Traffic" },
+        { name: "Business", price: "9,99", storage: "50 GB SSD", websites: "5 Websites", email: "25 E-Mail-Konten", bandwidth: "Unbegrenzter Traffic", popular: true },
+        { name: "Premium", price: "19,99", storage: "100 GB SSD", websites: "Unbegrenzt", email: "Unbegrenzte E-Mail", bandwidth: "Unbegrenzter Traffic" },
+      ],
+      cta: "Paket Wählen",
     },
     fr: {
       title: "Hébergement Web",
       subtitle: "Hébergement fiable pour votre site web",
       intro: "Un hébergement web rapide, sécurisé et fiable est essentiel au succès de votre site. Nos solutions d'hébergement offrent une excellente disponibilité, des temps de chargement rapides et un support 24/7.",
+      pricingTitle: "Forfaits d'Hébergement",
+      pricingSubtitle: "Choisissez le forfait qui vous convient",
+      perMonth: "/mois",
+      popular: "Populaire",
       features: [
         { title: "Garantie de Disponibilité 99,9%", desc: "Votre site est toujours accessible grâce à notre infrastructure fiable" },
         { title: "Stockage SSD", desc: "Disques SSD ultra-rapides pour des performances optimales" },
@@ -61,12 +92,21 @@ export default function Webhosting() {
         { title: "Surveillance 24/7", desc: "Surveillance continue de votre site et serveur" },
         { title: "Solutions Évolutives", desc: "Montez en puissance facilement à mesure que votre site grandit" },
       ],
-      cta: "Voir les Forfaits d'Hébergement",
+      packages: [
+        { name: "Starter", price: "4,99", storage: "10 Go SSD", websites: "1 Site web", email: "5 Comptes e-mail", bandwidth: "Trafic illimité" },
+        { name: "Business", price: "9,99", storage: "50 Go SSD", websites: "5 Sites web", email: "25 Comptes e-mail", bandwidth: "Trafic illimité", popular: true },
+        { name: "Premium", price: "19,99", storage: "100 Go SSD", websites: "Illimité", email: "E-mail illimité", bandwidth: "Trafic illimité" },
+      ],
+      cta: "Choisir le Forfait",
     },
     es: {
       title: "Alojamiento Web",
       subtitle: "Alojamiento confiable para su sitio web",
       intro: "El alojamiento web rápido, seguro y confiable es esencial para el éxito de su sitio. Nuestras soluciones de hosting ofrecen excelente tiempo de actividad, tiempos de carga rápidos y soporte 24/7.",
+      pricingTitle: "Paquetes de Hosting",
+      pricingSubtitle: "Elija el paquete que le convenga",
+      perMonth: "/mes",
+      popular: "Popular",
       features: [
         { title: "Garantía de Disponibilidad 99.9%", desc: "Su sitio siempre está accesible gracias a nuestra infraestructura confiable" },
         { title: "Almacenamiento SSD", desc: "Discos SSD ultrarrápidos para un rendimiento óptimo del sitio" },
@@ -75,7 +115,12 @@ export default function Webhosting() {
         { title: "Monitoreo 24/7", desc: "Monitoreo continuo de su sitio web y servidor" },
         { title: "Soluciones Escalables", desc: "Escale fácilmente a medida que su sitio crece" },
       ],
-      cta: "Ver Paquetes de Hosting",
+      packages: [
+        { name: "Starter", price: "4,99", storage: "10 GB SSD", websites: "1 Sitio web", email: "5 Cuentas de correo", bandwidth: "Tráfico ilimitado" },
+        { name: "Business", price: "9,99", storage: "50 GB SSD", websites: "5 Sitios web", email: "25 Cuentas de correo", bandwidth: "Tráfico ilimitado", popular: true },
+        { name: "Premium", price: "19,99", storage: "100 GB SSD", websites: "Ilimitado", email: "Correo ilimitado", bandwidth: "Tráfico ilimitado" },
+      ],
+      cta: "Elegir Paquete",
     },
   };
 
@@ -89,6 +134,69 @@ export default function Webhosting() {
           <div className="max-w-3xl mx-auto">
             <p className="text-lg text-gray-300 mb-12">{t.intro}</p>
           </div>
+
+          {/* Pricing Packages */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold text-white text-center mb-2">{t.pricingTitle}</h2>
+            <p className="text-gray-400 text-center mb-8">{t.pricingSubtitle}</p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {t.packages.map((pkg, index) => (
+                <div key={index} className={`relative bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border ${pkg.popular ? 'border-blue-500' : 'border-gray-700/50'}`}>
+                  {pkg.popular && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                      {t.popular}
+                    </div>
+                  )}
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-bold text-white mb-2">{pkg.name}</h3>
+                    <div className="text-white">
+                      <span className="text-4xl font-bold">€{pkg.price}</span>
+                      <span className="text-gray-400">{t.perMonth}</span>
+                    </div>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    <li className="flex items-center gap-3 text-gray-300">
+                      <svg className="w-5 h-5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {pkg.storage}
+                    </li>
+                    <li className="flex items-center gap-3 text-gray-300">
+                      <svg className="w-5 h-5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {pkg.websites}
+                    </li>
+                    <li className="flex items-center gap-3 text-gray-300">
+                      <svg className="w-5 h-5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {pkg.email}
+                    </li>
+                    <li className="flex items-center gap-3 text-gray-300">
+                      <svg className="w-5 h-5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {pkg.bandwidth}
+                    </li>
+                    <li className="flex items-center gap-3 text-gray-300">
+                      <svg className="w-5 h-5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      SSL + Backups
+                    </li>
+                  </ul>
+                  <a
+                    href="/contact"
+                    className={`block text-center py-3 rounded-lg font-medium transition-colors ${pkg.popular ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-700 text-white hover:bg-gray-600'}`}
+                  >
+                    {t.cta}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {t.features.map((feature, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50">
@@ -101,14 +209,6 @@ export default function Webhosting() {
                 <p className="text-gray-400">{feature.desc}</p>
               </div>
             ))}
-          </div>
-          <div className="text-center mt-12">
-            <a
-              href="/contact"
-              className="btn bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-lg font-medium"
-            >
-              {t.cta}
-            </a>
           </div>
         </div>
       </section>
