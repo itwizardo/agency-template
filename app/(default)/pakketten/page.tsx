@@ -5,7 +5,7 @@ import { useLanguage } from '@/lib/i18n';
 import PageHeader from '@/components/page-header';
 import PackageCard from '@/components/package-card';
 
-type TabKey = 'websites' | 'ecommerce' | 'email' | 'bundles';
+type TabKey = 'websites' | 'ecommerce' | 'email' | 'chatbots' | 'marketing' | 'bundles';
 
 export default function PakkettenPage() {
   const { locale } = useLanguage();
@@ -20,6 +20,8 @@ export default function PakkettenPage() {
         websites: 'Websites',
         ecommerce: 'E-commerce',
         email: 'Email & Domein',
+        chatbots: 'Chatbots',
+        marketing: 'Marketing',
         bundles: 'Bundels',
       },
       priceLabel: {
@@ -189,6 +191,105 @@ export default function PakkettenPage() {
           ],
         },
       ],
+      chatbots: [
+        {
+          name: 'Starter',
+          description: 'Basis chatbot',
+          priceOnce: '199',
+          priceMonthly: '29,99',
+          features: [
+            { text: 'AI-gestuurde chatbot', included: true },
+            { text: 'Tot 500 gesprekken/maand', included: true },
+            { text: 'Website integratie', included: true },
+            { text: 'Basis FAQ training', included: true },
+            { text: 'Email notificaties', included: true },
+            { text: 'Geavanceerde AI training', included: false },
+            { text: 'WhatsApp integratie', included: false },
+            { text: 'CRM koppeling', included: false },
+          ],
+        },
+        {
+          name: 'Business',
+          description: 'Professionele chatbot',
+          priceOnce: '499',
+          priceMonthly: '59,99',
+          popular: true,
+          features: [
+            { text: 'AI-gestuurde chatbot', included: true },
+            { text: 'Tot 2.500 gesprekken/maand', included: true },
+            { text: 'Website + WhatsApp', included: true },
+            { text: 'Uitgebreide AI training', included: true },
+            { text: 'Lead capture formulieren', included: true },
+            { text: 'Geavanceerde AI training', included: true },
+            { text: 'Basis CRM integratie', included: true },
+            { text: 'Multi-taal ondersteuning', included: false },
+          ],
+        },
+        {
+          name: 'Enterprise',
+          description: 'Maatwerk chatbot',
+          priceOnce: '999',
+          priceMonthly: '99,99',
+          features: [
+            { text: 'AI-gestuurde chatbot', included: true },
+            { text: 'Onbeperkt gesprekken', included: true },
+            { text: 'Alle kanalen (web, WhatsApp, etc)', included: true },
+            { text: 'Custom AI training', included: true },
+            { text: 'Geavanceerde analytics', included: true },
+            { text: 'Volledige CRM integratie', included: true },
+            { text: 'Multi-taal ondersteuning', included: true },
+            { text: 'Dedicated support', included: true },
+          ],
+        },
+      ],
+      marketing: [
+        {
+          name: 'Starter',
+          description: 'SEO basis',
+          priceMonthly: '199',
+          features: [
+            { text: 'Keyword onderzoek', included: true },
+            { text: 'On-page SEO optimalisatie', included: true },
+            { text: 'Google Search Console setup', included: true },
+            { text: 'Maandelijkse rapportage', included: true },
+            { text: '5 zoekwoorden tracking', included: true },
+            { text: 'Content creatie', included: false },
+            { text: 'Linkbuilding', included: false },
+            { text: 'Social media beheer', included: false },
+          ],
+        },
+        {
+          name: 'Business',
+          description: 'Complete SEO & Marketing',
+          priceMonthly: '399',
+          popular: true,
+          features: [
+            { text: 'Uitgebreid keyword onderzoek', included: true },
+            { text: 'On-page + technische SEO', included: true },
+            { text: 'Google Ads beheer', included: true },
+            { text: 'Wekelijkse rapportage', included: true },
+            { text: '20 zoekwoorden tracking', included: true },
+            { text: '2 blogartikelen/maand', included: true },
+            { text: 'Basis linkbuilding', included: true },
+            { text: 'Social media beheer', included: false },
+          ],
+        },
+        {
+          name: 'Premium',
+          description: 'Full-service marketing',
+          priceMonthly: '799',
+          features: [
+            { text: 'Complete SEO strategie', included: true },
+            { text: 'Google Ads + Social Ads', included: true },
+            { text: 'Email marketing', included: true },
+            { text: 'Dagelijkse monitoring', included: true },
+            { text: 'Onbeperkt zoekwoorden', included: true },
+            { text: '4 blogartikelen/maand', included: true },
+            { text: 'Actieve linkbuilding', included: true },
+            { text: 'Social media beheer', included: true },
+          ],
+        },
+      ],
       bundles: [
         {
           name: 'Starter Bundel',
@@ -249,6 +350,8 @@ export default function PakkettenPage() {
         websites: 'Websites',
         ecommerce: 'E-commerce',
         email: 'Email & Domain',
+        chatbots: 'Chatbots',
+        marketing: 'Marketing',
         bundles: 'Bundles',
       },
       priceLabel: {
@@ -418,6 +521,105 @@ export default function PakkettenPage() {
           ],
         },
       ],
+      chatbots: [
+        {
+          name: 'Starter',
+          description: 'Basic chatbot',
+          priceOnce: '199',
+          priceMonthly: '29.99',
+          features: [
+            { text: 'AI-powered chatbot', included: true },
+            { text: 'Up to 500 conversations/month', included: true },
+            { text: 'Website integration', included: true },
+            { text: 'Basic FAQ training', included: true },
+            { text: 'Email notifications', included: true },
+            { text: 'Advanced AI training', included: false },
+            { text: 'WhatsApp integration', included: false },
+            { text: 'CRM integration', included: false },
+          ],
+        },
+        {
+          name: 'Business',
+          description: 'Professional chatbot',
+          priceOnce: '499',
+          priceMonthly: '59.99',
+          popular: true,
+          features: [
+            { text: 'AI-powered chatbot', included: true },
+            { text: 'Up to 2,500 conversations/month', included: true },
+            { text: 'Website + WhatsApp', included: true },
+            { text: 'Extended AI training', included: true },
+            { text: 'Lead capture forms', included: true },
+            { text: 'Advanced AI training', included: true },
+            { text: 'Basic CRM integration', included: true },
+            { text: 'Multi-language support', included: false },
+          ],
+        },
+        {
+          name: 'Enterprise',
+          description: 'Custom chatbot',
+          priceOnce: '999',
+          priceMonthly: '99.99',
+          features: [
+            { text: 'AI-powered chatbot', included: true },
+            { text: 'Unlimited conversations', included: true },
+            { text: 'All channels (web, WhatsApp, etc)', included: true },
+            { text: 'Custom AI training', included: true },
+            { text: 'Advanced analytics', included: true },
+            { text: 'Full CRM integration', included: true },
+            { text: 'Multi-language support', included: true },
+            { text: 'Dedicated support', included: true },
+          ],
+        },
+      ],
+      marketing: [
+        {
+          name: 'Starter',
+          description: 'Basic SEO',
+          priceMonthly: '199',
+          features: [
+            { text: 'Keyword research', included: true },
+            { text: 'On-page SEO optimization', included: true },
+            { text: 'Google Search Console setup', included: true },
+            { text: 'Monthly reporting', included: true },
+            { text: '5 keyword tracking', included: true },
+            { text: 'Content creation', included: false },
+            { text: 'Link building', included: false },
+            { text: 'Social media management', included: false },
+          ],
+        },
+        {
+          name: 'Business',
+          description: 'Complete SEO & Marketing',
+          priceMonthly: '399',
+          popular: true,
+          features: [
+            { text: 'Extended keyword research', included: true },
+            { text: 'On-page + technical SEO', included: true },
+            { text: 'Google Ads management', included: true },
+            { text: 'Weekly reporting', included: true },
+            { text: '20 keyword tracking', included: true },
+            { text: '2 blog articles/month', included: true },
+            { text: 'Basic link building', included: true },
+            { text: 'Social media management', included: false },
+          ],
+        },
+        {
+          name: 'Premium',
+          description: 'Full-service marketing',
+          priceMonthly: '799',
+          features: [
+            { text: 'Complete SEO strategy', included: true },
+            { text: 'Google Ads + Social Ads', included: true },
+            { text: 'Email marketing', included: true },
+            { text: 'Daily monitoring', included: true },
+            { text: 'Unlimited keywords', included: true },
+            { text: '4 blog articles/month', included: true },
+            { text: 'Active link building', included: true },
+            { text: 'Social media management', included: true },
+          ],
+        },
+      ],
       bundles: [
         {
           name: 'Starter Bundle',
@@ -478,6 +680,8 @@ export default function PakkettenPage() {
         websites: 'Websites',
         ecommerce: 'E-Commerce',
         email: 'E-Mail & Domain',
+        chatbots: 'Chatbots',
+        marketing: 'Marketing',
         bundles: 'Pakete',
       },
       priceLabel: {
@@ -647,6 +851,105 @@ export default function PakkettenPage() {
           ],
         },
       ],
+      chatbots: [
+        {
+          name: 'Starter',
+          description: 'Basis-Chatbot',
+          priceOnce: '199',
+          priceMonthly: '29,99',
+          features: [
+            { text: 'KI-gesteuerter Chatbot', included: true },
+            { text: 'Bis zu 500 Gespräche/Monat', included: true },
+            { text: 'Website-Integration', included: true },
+            { text: 'Basis-FAQ-Training', included: true },
+            { text: 'E-Mail-Benachrichtigungen', included: true },
+            { text: 'Erweitertes KI-Training', included: false },
+            { text: 'WhatsApp-Integration', included: false },
+            { text: 'CRM-Integration', included: false },
+          ],
+        },
+        {
+          name: 'Business',
+          description: 'Professioneller Chatbot',
+          priceOnce: '499',
+          priceMonthly: '59,99',
+          popular: true,
+          features: [
+            { text: 'KI-gesteuerter Chatbot', included: true },
+            { text: 'Bis zu 2.500 Gespräche/Monat', included: true },
+            { text: 'Website + WhatsApp', included: true },
+            { text: 'Erweitertes KI-Training', included: true },
+            { text: 'Lead-Erfassungsformulare', included: true },
+            { text: 'Fortgeschrittenes KI-Training', included: true },
+            { text: 'Basis-CRM-Integration', included: true },
+            { text: 'Mehrsprachige Unterstützung', included: false },
+          ],
+        },
+        {
+          name: 'Enterprise',
+          description: 'Maßgeschneiderter Chatbot',
+          priceOnce: '999',
+          priceMonthly: '99,99',
+          features: [
+            { text: 'KI-gesteuerter Chatbot', included: true },
+            { text: 'Unbegrenzte Gespräche', included: true },
+            { text: 'Alle Kanäle (Web, WhatsApp, etc)', included: true },
+            { text: 'Individuelles KI-Training', included: true },
+            { text: 'Erweiterte Analysen', included: true },
+            { text: 'Vollständige CRM-Integration', included: true },
+            { text: 'Mehrsprachige Unterstützung', included: true },
+            { text: 'Dedizierter Support', included: true },
+          ],
+        },
+      ],
+      marketing: [
+        {
+          name: 'Starter',
+          description: 'SEO-Basis',
+          priceMonthly: '199',
+          features: [
+            { text: 'Keyword-Recherche', included: true },
+            { text: 'On-Page-SEO-Optimierung', included: true },
+            { text: 'Google Search Console Setup', included: true },
+            { text: 'Monatliches Reporting', included: true },
+            { text: '5 Keyword-Tracking', included: true },
+            { text: 'Content-Erstellung', included: false },
+            { text: 'Linkbuilding', included: false },
+            { text: 'Social-Media-Management', included: false },
+          ],
+        },
+        {
+          name: 'Business',
+          description: 'Komplettes SEO & Marketing',
+          priceMonthly: '399',
+          popular: true,
+          features: [
+            { text: 'Erweiterte Keyword-Recherche', included: true },
+            { text: 'On-Page + technisches SEO', included: true },
+            { text: 'Google Ads Management', included: true },
+            { text: 'Wöchentliches Reporting', included: true },
+            { text: '20 Keyword-Tracking', included: true },
+            { text: '2 Blogartikel/Monat', included: true },
+            { text: 'Basis-Linkbuilding', included: true },
+            { text: 'Social-Media-Management', included: false },
+          ],
+        },
+        {
+          name: 'Premium',
+          description: 'Full-Service-Marketing',
+          priceMonthly: '799',
+          features: [
+            { text: 'Komplette SEO-Strategie', included: true },
+            { text: 'Google Ads + Social Ads', included: true },
+            { text: 'E-Mail-Marketing', included: true },
+            { text: 'Tägliches Monitoring', included: true },
+            { text: 'Unbegrenzte Keywords', included: true },
+            { text: '4 Blogartikel/Monat', included: true },
+            { text: 'Aktives Linkbuilding', included: true },
+            { text: 'Social-Media-Management', included: true },
+          ],
+        },
+      ],
       bundles: [
         {
           name: 'Starter Paket',
@@ -707,6 +1010,8 @@ export default function PakkettenPage() {
         websites: 'Sites Web',
         ecommerce: 'E-commerce',
         email: 'Email & Domaine',
+        chatbots: 'Chatbots',
+        marketing: 'Marketing',
         bundles: 'Forfaits',
       },
       priceLabel: {
@@ -876,6 +1181,105 @@ export default function PakkettenPage() {
           ],
         },
       ],
+      chatbots: [
+        {
+          name: 'Starter',
+          description: 'Chatbot basique',
+          priceOnce: '199',
+          priceMonthly: '29,99',
+          features: [
+            { text: 'Chatbot alimenté par IA', included: true },
+            { text: 'Jusqu\'à 500 conversations/mois', included: true },
+            { text: 'Intégration site web', included: true },
+            { text: 'Formation FAQ de base', included: true },
+            { text: 'Notifications email', included: true },
+            { text: 'Formation IA avancée', included: false },
+            { text: 'Intégration WhatsApp', included: false },
+            { text: 'Intégration CRM', included: false },
+          ],
+        },
+        {
+          name: 'Business',
+          description: 'Chatbot professionnel',
+          priceOnce: '499',
+          priceMonthly: '59,99',
+          popular: true,
+          features: [
+            { text: 'Chatbot alimenté par IA', included: true },
+            { text: 'Jusqu\'à 2 500 conversations/mois', included: true },
+            { text: 'Site web + WhatsApp', included: true },
+            { text: 'Formation IA étendue', included: true },
+            { text: 'Formulaires de capture de leads', included: true },
+            { text: 'Formation IA avancée', included: true },
+            { text: 'Intégration CRM de base', included: true },
+            { text: 'Support multilingue', included: false },
+          ],
+        },
+        {
+          name: 'Enterprise',
+          description: 'Chatbot sur mesure',
+          priceOnce: '999',
+          priceMonthly: '99,99',
+          features: [
+            { text: 'Chatbot alimenté par IA', included: true },
+            { text: 'Conversations illimitées', included: true },
+            { text: 'Tous les canaux (web, WhatsApp, etc)', included: true },
+            { text: 'Formation IA personnalisée', included: true },
+            { text: 'Analyses avancées', included: true },
+            { text: 'Intégration CRM complète', included: true },
+            { text: 'Support multilingue', included: true },
+            { text: 'Support dédié', included: true },
+          ],
+        },
+      ],
+      marketing: [
+        {
+          name: 'Starter',
+          description: 'SEO de base',
+          priceMonthly: '199',
+          features: [
+            { text: 'Recherche de mots-clés', included: true },
+            { text: 'Optimisation SEO on-page', included: true },
+            { text: 'Configuration Google Search Console', included: true },
+            { text: 'Rapport mensuel', included: true },
+            { text: 'Suivi de 5 mots-clés', included: true },
+            { text: 'Création de contenu', included: false },
+            { text: 'Link building', included: false },
+            { text: 'Gestion réseaux sociaux', included: false },
+          ],
+        },
+        {
+          name: 'Business',
+          description: 'SEO & Marketing complet',
+          priceMonthly: '399',
+          popular: true,
+          features: [
+            { text: 'Recherche de mots-clés étendue', included: true },
+            { text: 'SEO on-page + technique', included: true },
+            { text: 'Gestion Google Ads', included: true },
+            { text: 'Rapport hebdomadaire', included: true },
+            { text: 'Suivi de 20 mots-clés', included: true },
+            { text: '2 articles de blog/mois', included: true },
+            { text: 'Link building de base', included: true },
+            { text: 'Gestion réseaux sociaux', included: false },
+          ],
+        },
+        {
+          name: 'Premium',
+          description: 'Marketing full-service',
+          priceMonthly: '799',
+          features: [
+            { text: 'Stratégie SEO complète', included: true },
+            { text: 'Google Ads + Social Ads', included: true },
+            { text: 'Email marketing', included: true },
+            { text: 'Monitoring quotidien', included: true },
+            { text: 'Mots-clés illimités', included: true },
+            { text: '4 articles de blog/mois', included: true },
+            { text: 'Link building actif', included: true },
+            { text: 'Gestion réseaux sociaux', included: true },
+          ],
+        },
+      ],
       bundles: [
         {
           name: 'Forfait Starter',
@@ -936,6 +1340,8 @@ export default function PakkettenPage() {
         websites: 'Sitios Web',
         ecommerce: 'E-commerce',
         email: 'Email y Dominio',
+        chatbots: 'Chatbots',
+        marketing: 'Marketing',
         bundles: 'Paquetes',
       },
       priceLabel: {
@@ -1105,6 +1511,105 @@ export default function PakkettenPage() {
           ],
         },
       ],
+      chatbots: [
+        {
+          name: 'Starter',
+          description: 'Chatbot básico',
+          priceOnce: '199',
+          priceMonthly: '29,99',
+          features: [
+            { text: 'Chatbot con IA', included: true },
+            { text: 'Hasta 500 conversaciones/mes', included: true },
+            { text: 'Integración sitio web', included: true },
+            { text: 'Entrenamiento FAQ básico', included: true },
+            { text: 'Notificaciones por email', included: true },
+            { text: 'Entrenamiento IA avanzado', included: false },
+            { text: 'Integración WhatsApp', included: false },
+            { text: 'Integración CRM', included: false },
+          ],
+        },
+        {
+          name: 'Business',
+          description: 'Chatbot profesional',
+          priceOnce: '499',
+          priceMonthly: '59,99',
+          popular: true,
+          features: [
+            { text: 'Chatbot con IA', included: true },
+            { text: 'Hasta 2.500 conversaciones/mes', included: true },
+            { text: 'Sitio web + WhatsApp', included: true },
+            { text: 'Entrenamiento IA extenso', included: true },
+            { text: 'Formularios de captación', included: true },
+            { text: 'Entrenamiento IA avanzado', included: true },
+            { text: 'Integración CRM básica', included: true },
+            { text: 'Soporte multilingüe', included: false },
+          ],
+        },
+        {
+          name: 'Enterprise',
+          description: 'Chatbot personalizado',
+          priceOnce: '999',
+          priceMonthly: '99,99',
+          features: [
+            { text: 'Chatbot con IA', included: true },
+            { text: 'Conversaciones ilimitadas', included: true },
+            { text: 'Todos los canales (web, WhatsApp, etc)', included: true },
+            { text: 'Entrenamiento IA personalizado', included: true },
+            { text: 'Análisis avanzados', included: true },
+            { text: 'Integración CRM completa', included: true },
+            { text: 'Soporte multilingüe', included: true },
+            { text: 'Soporte dedicado', included: true },
+          ],
+        },
+      ],
+      marketing: [
+        {
+          name: 'Starter',
+          description: 'SEO básico',
+          priceMonthly: '199',
+          features: [
+            { text: 'Investigación de palabras clave', included: true },
+            { text: 'Optimización SEO on-page', included: true },
+            { text: 'Configuración Google Search Console', included: true },
+            { text: 'Informe mensual', included: true },
+            { text: 'Seguimiento de 5 palabras clave', included: true },
+            { text: 'Creación de contenido', included: false },
+            { text: 'Link building', included: false },
+            { text: 'Gestión de redes sociales', included: false },
+          ],
+        },
+        {
+          name: 'Business',
+          description: 'SEO y Marketing completo',
+          priceMonthly: '399',
+          popular: true,
+          features: [
+            { text: 'Investigación de palabras clave ampliada', included: true },
+            { text: 'SEO on-page + técnico', included: true },
+            { text: 'Gestión de Google Ads', included: true },
+            { text: 'Informe semanal', included: true },
+            { text: 'Seguimiento de 20 palabras clave', included: true },
+            { text: '2 artículos de blog/mes', included: true },
+            { text: 'Link building básico', included: true },
+            { text: 'Gestión de redes sociales', included: false },
+          ],
+        },
+        {
+          name: 'Premium',
+          description: 'Marketing full-service',
+          priceMonthly: '799',
+          features: [
+            { text: 'Estrategia SEO completa', included: true },
+            { text: 'Google Ads + Social Ads', included: true },
+            { text: 'Email marketing', included: true },
+            { text: 'Monitoreo diario', included: true },
+            { text: 'Palabras clave ilimitadas', included: true },
+            { text: '4 artículos de blog/mes', included: true },
+            { text: 'Link building activo', included: true },
+            { text: 'Gestión de redes sociales', included: true },
+          ],
+        },
+      ],
       bundles: [
         {
           name: 'Paquete Starter',
@@ -1160,7 +1665,7 @@ export default function PakkettenPage() {
   };
 
   const t = content[locale];
-  const tabs: TabKey[] = ['websites', 'ecommerce', 'email', 'bundles'];
+  const tabs: TabKey[] = ['websites', 'ecommerce', 'email', 'chatbots', 'marketing', 'bundles'];
 
   const getPackages = () => {
     switch (activeTab) {
@@ -1170,6 +1675,10 @@ export default function PakkettenPage() {
         return t.ecommerce;
       case 'email':
         return t.email;
+      case 'chatbots':
+        return t.chatbots;
+      case 'marketing':
+        return t.marketing;
       case 'bundles':
         return t.bundles;
       default:
