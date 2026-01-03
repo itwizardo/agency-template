@@ -9,6 +9,10 @@ services:
       - "8080:80"
     environment:
       - TZ=Europe/Amsterdam
+      - DB_HOST=db
+      - DB_NAME=fossbilling
+      - DB_USER=fossbilling
+      - DB_PASSWORD=Gwc2024BillingSecure!
     volumes:
       - fossbilling_data:/var/www/html
     depends_on:
@@ -21,10 +25,10 @@ services:
     container_name: fossbilling_db
     restart: unless-stopped
     environment:
-      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD:-strongrootpassword}
-      - MYSQL_DATABASE=${DB_NAME:-fossbilling}
-      - MYSQL_USER=${DB_USER:-fossbilling}
-      - MYSQL_PASSWORD=${DB_PASSWORD:-strongpassword}
+      - MYSQL_ROOT_PASSWORD=GwcRoot2024Secure!
+      - MYSQL_DATABASE=fossbilling
+      - MYSQL_USER=fossbilling
+      - MYSQL_PASSWORD=Gwc2024BillingSecure!
     volumes:
       - db_data:/var/lib/mysql
     networks:

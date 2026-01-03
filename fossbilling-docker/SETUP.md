@@ -6,14 +6,7 @@
 2. Klik op **"Create Project"** of selecteer bestaand project
 3. Kies **"Docker Compose"**
 4. Upload of plak de `docker-compose.yml` inhoud
-5. Voeg environment variables toe:
-   ```
-   DB_ROOT_PASSWORD=jouw_sterke_root_wachtwoord
-   DB_NAME=fossbilling
-   DB_USER=fossbilling
-   DB_PASSWORD=jouw_sterke_wachtwoord
-   ```
-6. Deploy
+5. Klik **Deploy** - klaar! (geen .env nodig, alles staat in compose)
 
 ## Stap 2: Domain configureren
 
@@ -25,11 +18,11 @@
 ## Stap 3: FOSSBilling Installatie
 
 1. Ga naar `https://billing.gwcwebdesign.com`
-2. Volg de installatie wizard:
-   - **Database Host:** `db` (de container naam)
+2. Volg de installatie wizard met deze gegevens:
+   - **Database Host:** `db`
    - **Database Name:** `fossbilling`
    - **Database User:** `fossbilling`
-   - **Database Password:** (je gekozen wachtwoord)
+   - **Database Password:** `Gwc2024BillingSecure!`
 3. Maak admin account aan
 4. Voltooi installatie
 
