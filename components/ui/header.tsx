@@ -88,6 +88,12 @@ export default function Header() {
                 {t.footer.services.webhosting}
               </Link>
               <Link
+                href="/pakketten"
+                className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
+              >
+                {t.header.packages}
+              </Link>
+              <Link
                 href="/portfolio"
                 className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
               >
@@ -180,6 +186,13 @@ export default function Header() {
                   </div>
                 </div>
 
+                <Link
+                  href="/pakketten"
+                  className="px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl transition-all font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {t.header.packages}
+                </Link>
                 <Link
                   href="/portfolio"
                   className="px-4 py-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-xl transition-all font-medium"
