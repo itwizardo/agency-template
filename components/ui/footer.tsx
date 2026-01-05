@@ -234,6 +234,25 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   </svg>
                 </a>
               </li>
+              <li>
+                <a
+                  className="flex items-center justify-center text-gray-400 transition hover:text-pink-400"
+                  href="https://www.instagram.com/gwcwebdesign?igsh=YTAxMnNienBudWVn&utm_source=qr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <svg
+                    className="h-8 w-8 fill-current"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="20.145" cy="11.892" r="1" />
+                    <path d="M16 20c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4Zm0-6c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2Z" />
+                    <path d="M20 26h-8c-3.309 0-6-2.691-6-6v-8c0-3.309 2.691-6 6-6h8c3.309 0 6 2.691 6 6v8c0 3.309-2.691 6-6 6Zm-8-18c-2.206 0-4 1.794-4 4v8c0 2.206 1.794 4 4 4h8c2.206 0 4-1.794 4-4v-8c0-2.206-1.794-4-4-4h-8Z" />
+                  </svg>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
