@@ -81,7 +81,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
 
           {/* 3rd block - Diensten/Services Column 2 */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium text-gray-200 opacity-0 hidden lg:block">&nbsp;</h3>
+            <h3 className="text-sm font-medium text-gray-200">{t.footer.services.title2}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
