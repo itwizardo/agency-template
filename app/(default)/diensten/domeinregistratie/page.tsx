@@ -96,12 +96,12 @@ export default function Domeinregistratie() {
   };
 
   const pricing = [
-    { tld: ".nl", price: "9,99" },
-    { tld: ".com", price: "12,99" },
-    { tld: ".eu", price: "8,99" },
-    { tld: ".be", price: "10,99" },
-    { tld: ".de", price: "11,99" },
-    { tld: ".net", price: "14,99" },
+    { tld: ".nl", price: "12,41" },
+    { tld: ".com", price: "14,99" },
+    { tld: ".eu", price: "11,99" },
+    { tld: ".be", price: "12,99" },
+    { tld: ".de", price: "12,99" },
+    { tld: ".net", price: "16,99" },
   ];
 
   const t = content[locale];

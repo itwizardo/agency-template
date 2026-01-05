@@ -12,12 +12,12 @@ interface DomainResult {
 const TLDS = ['.nl', '.com', '.eu', '.be', '.de', '.net'];
 
 const PRICES: Record<string, string> = {
-  '.nl': '9,99',
-  '.com': '12,99',
-  '.eu': '8,99',
-  '.be': '10,99',
-  '.de': '11,99',
-  '.net': '14,99',
+  '.nl': '12,41',
+  '.com': '14,99',
+  '.eu': '11,99',
+  '.be': '12,99',
+  '.de': '12,99',
+  '.net': '16,99',
 };
 
 export default function DomainSearch() {
