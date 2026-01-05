@@ -66,11 +66,33 @@ async function whmcsApiCall(action: string, params: Record<string, string>) {
 
 async function getClientByEmail(email: string): Promise<ClientInfo | null> {
   try {
-    const data = await whmcsApiCall('GetClients', { search: email });
+    // Try GetClientsDetails with email first (more direct)
+    const detailsData = await whmcsApiCall('GetClientsDetails', { email: email });
 
-    if (data.result === 'success' && data.clients?.client?.length > 0) {
+    if (detailsData.result === 'success' && detailsData.id) {
+      return {
+        id: parseInt(detailsData.id),
+        firstname: detailsData.firstname || '',
+        lastname: detailsData.lastname || '',
+        email: detailsData.email || email,
+        companyname: detailsData.companyname || undefined,
+      };
+    }
+
+    // Fallback: Try GetClients with search
+    const searchData = await whmcsApiCall('GetClients', {
+      search: email,
+      limitnum: '100',
+    });
+
+    if (searchData.result === 'success' && searchData.clients?.client) {
+      // Handle both array and single object response
+      const clients = Array.isArray(searchData.clients.client)
+        ? searchData.clients.client
+        : [searchData.clients.client];
+
       // Find exact email match
-      const client = data.clients.client.find(
+      const client = clients.find(
         (c: { email: string }) => c.email.toLowerCase() === email.toLowerCase()
       );
 
