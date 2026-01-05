@@ -2,13 +2,14 @@ import { NextResponse } from 'next/server';
 
 const TLDS = ['.nl', '.com', '.eu', '.be', '.de', '.net'];
 
-const PRICES: Record<string, string> = {
-  '.nl': '9,99',
-  '.com': '12,99',
-  '.eu': '8,99',
-  '.be': '10,99',
-  '.de': '11,99',
-  '.net': '14,99',
+// Fallback prices (used when WHMCS API not available)
+const FALLBACK_PRICES: Record<string, string> = {
+  '.nl': '12,41',
+  '.com': '14,99',
+  '.eu': '11,99',
+  '.be': '12,99',
+  '.de': '12,99',
+  '.net': '16,99',
 };
 
 // WHMCS API configuration
@@ -16,13 +17,69 @@ const WHMCS_URL = process.env.WHMCS_URL || 'https://billing.gwcwebdesign.com';
 const WHMCS_API_IDENTIFIER = process.env.WHMCS_API_IDENTIFIER || '';
 const WHMCS_API_SECRET = process.env.WHMCS_API_SECRET || '';
 
+// Cache for TLD pricing (refreshed every hour)
+let cachedPrices: Record<string, string> = {};
+let pricesCacheTime = 0;
+const CACHE_DURATION = 60 * 60 * 1000; // 1 hour
+
+async function fetchWHMCSPricing(): Promise<Record<string, string>> {
+  if (Date.now() - pricesCacheTime < CACHE_DURATION && Object.keys(cachedPrices).length > 0) {
+    return cachedPrices;
+  }
+
+  if (!WHMCS_API_IDENTIFIER || !WHMCS_API_SECRET) {
+    return FALLBACK_PRICES;
+  }
+
+  try {
+    const params = new URLSearchParams({
+      action: 'GetTLDPricing',
+      identifier: WHMCS_API_IDENTIFIER,
+      secret: WHMCS_API_SECRET,
+      responsetype: 'json',
+    });
+
+    const response = await fetch(`${WHMCS_URL}/includes/api.php`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: params.toString(),
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      if (data.result === 'success' && data.pricing) {
+        const prices: Record<string, string> = {};
+
+        for (const tld of TLDS) {
+          const tldKey = tld.replace('.', '');
+          if (data.pricing[tldKey]?.register?.[1]) {
+            // Format price with comma as decimal separator
+            const price = parseFloat(data.pricing[tldKey].register[1]).toFixed(2).replace('.', ',');
+            prices[tld] = price;
+          } else {
+            prices[tld] = FALLBACK_PRICES[tld];
+          }
+        }
+
+        cachedPrices = prices;
+        pricesCacheTime = Date.now();
+        return prices;
+      }
+    }
+  } catch (error) {
+    console.error('Failed to fetch WHMCS pricing:', error);
+  }
+
+  return FALLBACK_PRICES;
+}
+
 interface DomainResult {
   tld: string;
   available: boolean;
   price: string | null;
 }
 
-async function checkDomainWithWHMCS(domain: string, tld: string): Promise<DomainResult> {
+async function checkDomainWithWHMCS(domain: string, tld: string, prices: Record<string, string>): Promise<DomainResult> {
   // If WHMCS credentials are configured, use the API
   if (WHMCS_API_IDENTIFIER && WHMCS_API_SECRET) {
     try {
@@ -49,7 +106,7 @@ async function checkDomainWithWHMCS(domain: string, tld: string): Promise<Domain
         return {
           tld,
           available: isAvailable,
-          price: isAvailable ? PRICES[tld] : null,
+          price: isAvailable ? prices[tld] : null,
         };
       }
     } catch (error) {
@@ -72,7 +129,7 @@ async function checkDomainWithWHMCS(domain: string, tld: string): Promise<Domain
       return {
         tld,
         available: !isTaken,
-        price: !isTaken ? PRICES[tld] : null,
+        price: !isTaken ? prices[tld] : null,
       };
     }
   } catch {
@@ -83,7 +140,7 @@ async function checkDomainWithWHMCS(domain: string, tld: string): Promise<Domain
   return {
     tld,
     available: true,
-    price: PRICES[tld],
+    price: prices[tld],
   };
 }
 
@@ -101,9 +158,12 @@ export async function POST(request: Request) {
     // Clean the domain name
     const cleanDomain = domain.toLowerCase().replace(/[^a-z0-9-]/g, '');
 
+    // Fetch current pricing from WHMCS
+    const prices = await fetchWHMCSPricing();
+
     // Check all TLDs in parallel
     const results = await Promise.all(
-      TLDS.map((tld) => checkDomainWithWHMCS(cleanDomain, tld))
+      TLDS.map((tld) => checkDomainWithWHMCS(cleanDomain, tld, prices))
     );
 
     return NextResponse.json({ results });
