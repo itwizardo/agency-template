@@ -34,6 +34,8 @@ const platformImages = [
   { src: 'https://cdn.simpleicons.org/googleanalytics/E37400', alt: 'Google Analytics' },
   { src: 'https://cdn.simpleicons.org/mailchimp/FFE01B', alt: 'Mailchimp' },
   { src: 'https://cdn.simpleicons.org/hubspot/FF7A59', alt: 'HubSpot' },
+  // Business Suite
+  { src: 'https://cdn.simpleicons.org/zoho/C8202B', alt: 'Zoho' },
 ];
 
 const content = {
