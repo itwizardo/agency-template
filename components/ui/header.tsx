@@ -35,7 +35,7 @@ export default function Header() {
             <nav className="hidden md:flex items-center gap-3 lg:gap-5 xl:gap-6">
               <Link
                 href="/"
-                className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 whitespace-nowrap"
+                className="text-sm font-medium text-white hover:text-blue-400 transition-colors duration-200 whitespace-nowrap"
               >
                 {t.header.home}
               </Link>
@@ -46,7 +46,7 @@ export default function Header() {
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
-                <button className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-1 whitespace-nowrap">
+                <button className="text-sm font-medium text-white hover:text-blue-400 transition-colors duration-200 flex items-center gap-1 whitespace-nowrap">
                   {t.footer.services.title}
                   <svg className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -77,31 +77,31 @@ export default function Header() {
 
               <Link
                 href="/diensten/domeinregistratie"
-                className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 whitespace-nowrap"
+                className="text-sm font-medium text-white hover:text-blue-400 transition-colors duration-200 whitespace-nowrap"
               >
                 {t.footer.services.domainRegistration}
               </Link>
               <Link
                 href="/diensten/webhosting"
-                className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 whitespace-nowrap"
+                className="text-sm font-medium text-white hover:text-blue-400 transition-colors duration-200 whitespace-nowrap"
               >
                 {t.footer.services.webhosting}
               </Link>
               <Link
                 href="/pakketten"
-                className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 whitespace-nowrap"
+                className="text-sm font-medium text-white hover:text-blue-400 transition-colors duration-200 whitespace-nowrap"
               >
                 {t.header.packages}
               </Link>
               <Link
                 href="/portfolio"
-                className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 whitespace-nowrap"
+                className="text-sm font-medium text-white hover:text-blue-400 transition-colors duration-200 whitespace-nowrap"
               >
                 {t.header.portfolio}
               </Link>
               <Link
                 href="/contact"
-                className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 whitespace-nowrap"
+                className="text-sm font-medium text-white hover:text-blue-400 transition-colors duration-200 whitespace-nowrap"
               >
                 {t.header.contact}
               </Link>
