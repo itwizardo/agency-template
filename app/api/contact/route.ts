@@ -1,11 +1,12 @@
 import { NextResponse } from 'next/server';
 
-const TELEGRAM_BOT_TOKEN = '7984693529:AAFcLj_dKH39jnpwQg_Cc5clgTy0aWkkGXI';
-const TELEGRAM_CHAT_ID = '-1003599781100';
-const TELEGRAM_TOPIC_ID = 3;
+// Telegram configuration (set in .env)
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '';
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || '';
+const TELEGRAM_TOPIC_ID = process.env.TELEGRAM_TOPIC_ID ? parseInt(process.env.TELEGRAM_TOPIC_ID) : undefined;
 
-// WHMCS API configuration
-const WHMCS_URL = process.env.WHMCS_URL || 'https://billing.gwcwebdesign.com';
+// WHMCS API configuration (set in .env)
+const WHMCS_URL = process.env.WHMCS_URL || '';
 const WHMCS_API_IDENTIFIER = process.env.WHMCS_API_IDENTIFIER || '';
 const WHMCS_API_SECRET = process.env.WHMCS_API_SECRET || '';
 
@@ -21,7 +22,7 @@ async function createWHMCSTicket(
   subject: string,
   message: string
 ): Promise<TicketResult> {
-  if (!WHMCS_API_IDENTIFIER || !WHMCS_API_SECRET) {
+  if (!WHMCS_URL || !WHMCS_API_IDENTIFIER || !WHMCS_API_SECRET) {
     return { success: false };
   }
 
@@ -62,27 +63,39 @@ async function createWHMCSTicket(
   return { success: false };
 }
 
-async function sendToTelegram(message: string) {
+async function sendToTelegram(message: string): Promise<boolean> {
+  // Skip if Telegram not configured
+  if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
+    console.log('Telegram not configured, skipping notification');
+    return false;
+  }
+
   const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+
+  const body: Record<string, unknown> = {
+    chat_id: TELEGRAM_CHAT_ID,
+    text: message,
+    parse_mode: 'HTML',
+  };
+
+  // Only add topic ID if configured (for forum/group topics)
+  if (TELEGRAM_TOPIC_ID) {
+    body.message_thread_id = TELEGRAM_TOPIC_ID;
+  }
 
   const response = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: TELEGRAM_CHAT_ID,
-      message_thread_id: TELEGRAM_TOPIC_ID,
-      text: message,
-      parse_mode: 'HTML',
-    }),
+    body: JSON.stringify(body),
   });
 
   if (!response.ok) {
     const error = await response.text();
     console.error('Telegram API error:', error);
-    throw new Error('Failed to send Telegram message');
+    return false;
   }
 
-  return response.json();
+  return true;
 }
 
 export async function POST(request: Request) {
@@ -110,17 +123,17 @@ export async function POST(request: Request) {
 ${message}
 `.trim();
 
-    // Create WHMCS ticket
+    // Create WHMCS ticket (if configured)
     const ticketSubject = `Website Contact: ${name}`;
     const ticketMessage = `
-Nieuw bericht via contactformulier
+New message via contact form
 
-Naam: ${name}
-E-mail: ${email}
-Telefoon: ${phone || 'Niet opgegeven'}
-WhatsApp: ${whatsapp}
+Name: ${name}
+Email: ${email}
+Phone: ${phone || 'Not provided'}
+WhatsApp: ${whatsapp || 'Not provided'}
 
-Bericht:
+Message:
 ${message}
 `.trim();
 

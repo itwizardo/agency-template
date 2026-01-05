@@ -12,8 +12,8 @@ const FALLBACK_PRICES: Record<string, string> = {
   '.net': '16,99',
 };
 
-// WHMCS API configuration
-const WHMCS_URL = process.env.WHMCS_URL || 'https://billing.gwcwebdesign.com';
+// WHMCS API configuration (set in .env)
+const WHMCS_URL = process.env.WHMCS_URL || '';
 const WHMCS_API_IDENTIFIER = process.env.WHMCS_API_IDENTIFIER || '';
 const WHMCS_API_SECRET = process.env.WHMCS_API_SECRET || '';
 
@@ -27,7 +27,7 @@ async function fetchWHMCSPricing(): Promise<Record<string, string>> {
     return cachedPrices;
   }
 
-  if (!WHMCS_API_IDENTIFIER || !WHMCS_API_SECRET) {
+  if (!WHMCS_URL || !WHMCS_API_IDENTIFIER || !WHMCS_API_SECRET) {
     return FALLBACK_PRICES;
   }
 
