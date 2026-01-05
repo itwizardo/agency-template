@@ -1,8 +1,24 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useLanguage } from "@/lib/i18n";
 import PageHeader from "@/components/page-header";
+
+// Turnstile types
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (element: HTMLElement, options: {
+        sitekey: string;
+        callback: (token: string) => void;
+        'expired-callback': () => void;
+      }) => void;
+    };
+  }
+}
+
+// Turnstile site key (set in env, optional)
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '';
 
 export default function Contact() {
   const { locale } = useLanguage();
@@ -16,6 +32,33 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const turnstileRef = useRef<HTMLDivElement>(null);
+
+  // Load Turnstile script if site key is configured
+  useEffect(() => {
+    if (!TURNSTILE_SITE_KEY || typeof window === 'undefined') return;
+
+    const script = document.createElement('script');
+    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+
+    script.onload = () => {
+      if (window.turnstile && turnstileRef.current) {
+        window.turnstile.render(turnstileRef.current, {
+          sitekey: TURNSTILE_SITE_KEY,
+          callback: (token: string) => setTurnstileToken(token),
+          'expired-callback': () => setTurnstileToken(''),
+        });
+      }
+    };
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
 
   const content = {
     nl: {
@@ -33,6 +76,11 @@ export default function Contact() {
         sending: "Versturen...",
         success: "Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.",
         error: "Er is iets misgegaan. Probeer het later opnieuw.",
+        invalidName: "Voer een geldige naam in (minimaal 2 tekens)",
+        invalidEmail: "Voer een geldig e-mailadres in",
+        invalidPhone: "Voer een geldig telefoonnummer in",
+        invalidMessage: "Uw bericht moet minimaal 10 tekens bevatten",
+        turnstileRequired: "Voltooi de beveiligingscontrole",
       },
       info: {
         title: "Contactgegevens",
@@ -60,6 +108,11 @@ export default function Contact() {
         sending: "Sending...",
         success: "Thank you for your message! We will contact you as soon as possible.",
         error: "Something went wrong. Please try again later.",
+        invalidName: "Please enter a valid name (at least 2 characters)",
+        invalidEmail: "Please enter a valid email address",
+        invalidPhone: "Please enter a valid phone number",
+        invalidMessage: "Your message must be at least 10 characters",
+        turnstileRequired: "Please complete the security check",
       },
       info: {
         title: "Contact Information",
@@ -87,6 +140,11 @@ export default function Contact() {
         sending: "Senden...",
         success: "Vielen Dank für Ihre Nachricht! Wir werden uns so schnell wie möglich bei Ihnen melden.",
         error: "Etwas ist schief gelaufen. Bitte versuchen Sie es später erneut.",
+        invalidName: "Bitte geben Sie einen gültigen Namen ein (mindestens 2 Zeichen)",
+        invalidEmail: "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        invalidPhone: "Bitte geben Sie eine gültige Telefonnummer ein",
+        invalidMessage: "Ihre Nachricht muss mindestens 10 Zeichen enthalten",
+        turnstileRequired: "Bitte führen Sie die Sicherheitsüberprüfung durch",
       },
       info: {
         title: "Kontaktinformationen",
@@ -114,6 +172,11 @@ export default function Contact() {
         sending: "Envoi...",
         success: "Merci pour votre message ! Nous vous contacterons dans les plus brefs délais.",
         error: "Une erreur s'est produite. Veuillez réessayer plus tard.",
+        invalidName: "Veuillez entrer un nom valide (au moins 2 caractères)",
+        invalidEmail: "Veuillez entrer une adresse e-mail valide",
+        invalidPhone: "Veuillez entrer un numéro de téléphone valide",
+        invalidMessage: "Votre message doit contenir au moins 10 caractères",
+        turnstileRequired: "Veuillez compléter la vérification de sécurité",
       },
       info: {
         title: "Coordonnées",
@@ -141,6 +204,11 @@ export default function Contact() {
         sending: "Enviando...",
         success: "¡Gracias por su mensaje! Nos pondremos en contacto con usted lo antes posible.",
         error: "Algo salió mal. Por favor, inténtelo de nuevo más tarde.",
+        invalidName: "Por favor, introduzca un nombre válido (al menos 2 caracteres)",
+        invalidEmail: "Por favor, introduzca una dirección de correo electrónico válida",
+        invalidPhone: "Por favor, introduzca un número de teléfono válido",
+        invalidMessage: "Su mensaje debe tener al menos 10 caracteres",
+        turnstileRequired: "Por favor, complete la verificación de seguridad",
       },
       info: {
         title: "Información de contacto",
@@ -157,20 +225,80 @@ export default function Contact() {
 
   const t = content[locale];
 
+  // Validation helpers
+  const isValidEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const isValidPhone = (phone: string) => {
+    // Allow empty (optional field) or valid phone format
+    if (!phone) return true;
+    const phoneRegex = /^[+]?[\d\s\-()]{7,20}$/;
+    return phoneRegex.test(phone);
+  };
+
+  const validateForm = (): string | null => {
+    // Name validation (min 2 chars)
+    if (formData.name.trim().length < 2) {
+      return t.form.invalidName;
+    }
+
+    // Email validation
+    if (!isValidEmail(formData.email)) {
+      return t.form.invalidEmail;
+    }
+
+    // Phone validation (optional but if provided must be valid)
+    if (formData.phone && !isValidPhone(formData.phone)) {
+      return t.form.invalidPhone;
+    }
+
+    // WhatsApp validation (required, must be valid phone)
+    if (!isValidPhone(formData.whatsapp) || formData.whatsapp.trim().length < 7) {
+      return t.form.invalidPhone;
+    }
+
+    // Message validation (min 10 chars)
+    if (formData.message.trim().length < 10) {
+      return t.form.invalidMessage;
+    }
+
+    // Turnstile validation (if configured)
+    if (TURNSTILE_SITE_KEY && !turnstileToken) {
+      return t.form.turnstileRequired;
+    }
+
+    return null;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError('');
 
+    // Client-side validation
+    const validationError = validateForm();
+    if (validationError) {
+      setError(validationError);
+      setLoading(false);
+      return;
+    }
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          turnstileToken: turnstileToken || undefined,
+        }),
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error('Failed to send');
+        throw new Error(data.error || 'Failed to send');
       }
 
       setSubmitted(true);
@@ -280,6 +408,12 @@ export default function Contact() {
                       className="w-full px-4 py-3 bg-gray-900/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-500 resize-none"
                     />
                   </div>
+                  {/* Turnstile Widget (if configured) */}
+                  {TURNSTILE_SITE_KEY && (
+                    <div className="mb-6">
+                      <div ref={turnstileRef} className="flex justify-center" />
+                    </div>
+                  )}
                   {error && (
                     <div className="mb-6 p-4 bg-red-900/30 border border-red-500/30 rounded-lg text-red-300">
                       {error}
