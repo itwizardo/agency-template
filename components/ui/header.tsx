@@ -27,12 +27,12 @@ export default function Header() {
             <div className="absolute inset-0 rounded-[27px] bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
 
             {/* Site branding */}
-            <div className="flex items-center">
+            <div className="flex items-center shrink-0 mr-4">
               <Logo />
             </div>
 
             {/* Desktop Navigation - right aligned */}
-            <nav className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8">
+            <nav className="hidden md:flex items-center gap-3 lg:gap-5 xl:gap-6">
               <Link
                 href="/"
                 className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 whitespace-nowrap"
