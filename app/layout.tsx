@@ -15,6 +15,34 @@ const inter = Inter({
 export const metadata = {
   title: "GWC | Professionele Website & Webshop Ontwikkeling",
   description: "GWC bouwt professionele websites en webshops voor ambitieuze ondernemers. Van bedrijfswebsites tot e-commerce oplossingen in Nederland.",
+  metadataBase: new URL('https://gwcwebdesign.com'),
+  openGraph: {
+    title: "GWC | Professionele Website & Webshop Ontwikkeling",
+    description: "GWC bouwt professionele websites en webshops voor ambitieuze ondernemers. Van bedrijfswebsites tot e-commerce oplossingen in Nederland.",
+    url: 'https://gwcwebdesign.com',
+    siteName: 'GWC Web Design',
+    locale: 'nl_NL',
+    type: 'website',
+    images: [
+      {
+        url: '/gwc-logo.svg',
+        width: 512,
+        height: 512,
+        alt: 'GWC Web Design Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary',
+    title: "GWC | Professionele Website & Webshop Ontwikkeling",
+    description: "GWC bouwt professionele websites en webshops voor ambitieuze ondernemers.",
+  },
+  manifest: '/manifest.json',
+  themeColor: '#3B82F6',
+  appleWebApp: {
+    title: 'GWC Web Design',
+    statusBarStyle: 'black-translucent',
+  },
 };
 
 export default function RootLayout({

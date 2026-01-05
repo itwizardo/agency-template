@@ -1,0 +1,17 @@
+{
+  "name": "GWC Web Design",
+  "short_name": "GWC",
+  "description": "Professionele website & webshop ontwikkeling voor ambitieuze ondernemers",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#3B82F6",
+  "icons": [
+    {
+      "src": "/gwc-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
