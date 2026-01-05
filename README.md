@@ -1,6 +1,10 @@
 # Agency Template - Next.js + WHMCS Integration
 
-A modern agency/hosting website template built with **Next.js 15**, **TailwindCSS v4**, and optional **WHMCS integration** for domain registration and hosting businesses.
+![Agency Template Preview](https://raw.githubusercontent.com/cruip/tailwind-landing-page-template/main/.github/simple-light-preview.png)
+
+A modern, multilingual agency/hosting website template with **WHMCS billing integration**. Perfect for web agencies, hosting providers, and digital service businesses.
+
+Built with **Next.js 15**, **TailwindCSS v4**, and **TypeScript**.
 
 ## Features
 
