@@ -1,11 +1,45 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { useLanguage } from "@/lib/i18n";
 import PageHeader from "@/components/page-header";
 import DomainSearch from "@/components/domain-search";
 
+interface TldPricing {
+  tld: string;
+  price: string;
+}
+
+// Fallback prices in case API fails
+const FALLBACK_PRICING: TldPricing[] = [
+  { tld: ".nl", price: "12,41" },
+  { tld: ".com", price: "14,99" },
+  { tld: ".eu", price: "11,99" },
+  { tld: ".be", price: "12,99" },
+  { tld: ".de", price: "12,99" },
+  { tld: ".net", price: "16,99" },
+];
+
 export default function Domeinregistratie() {
   const { locale } = useLanguage();
+  const [pricing, setPricing] = useState<TldPricing[]>(FALLBACK_PRICING);
+
+  useEffect(() => {
+    async function fetchPricing() {
+      try {
+        const response = await fetch('/api/domain-pricing');
+        if (response.ok) {
+          const data = await response.json();
+          if (data.pricing) {
+            setPricing(data.pricing);
+          }
+        }
+      } catch (error) {
+        console.error('Failed to fetch pricing:', error);
+      }
+    }
+    fetchPricing();
+  }, []);
 
   const content = {
     nl: {
@@ -95,15 +129,6 @@ export default function Domeinregistratie() {
     },
   };
 
-  const pricing = [
-    { tld: ".nl", price: "12,41" },
-    { tld: ".com", price: "14,99" },
-    { tld: ".eu", price: "11,99" },
-    { tld: ".be", price: "12,99" },
-    { tld: ".de", price: "12,99" },
-    { tld: ".net", price: "16,99" },
-  ];
-
   const t = content[locale];
 
   return (
@@ -123,8 +148,8 @@ export default function Domeinregistratie() {
             <h2 className="text-2xl font-bold text-white text-center mb-2">{t.pricingTitle}</h2>
             <p className="text-gray-400 text-center mb-8">{t.pricingSubtitle}</p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {pricing.map((item, index) => (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 text-center hover:border-blue-500/50 transition-colors">
+              {pricing.map((item) => (
+                <div key={item.tld} className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 text-center hover:border-blue-500/50 transition-colors">
                   <div className="text-2xl font-bold text-blue-400 mb-1">{item.tld}</div>
                   <div className="text-white">
                     <span className="text-xl font-semibold">€{item.price}</span>
