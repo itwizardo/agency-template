@@ -18,6 +18,7 @@ Built with **Next.js 15**, **TailwindCSS v4**, and **TypeScript**.
 - **Spam Protection**
   - Input validation (email, phone, message length)
   - Cloudflare Turnstile CAPTCHA (optional)
+- **Botpress Chatbot** (optional AI chat widget)
 - **Telegram notifications** for contact form
 - **Responsive design** with dark theme
 - **SEO optimized**
@@ -116,6 +117,46 @@ TURNSTILE_SECRET_KEY=your_secret_key
 ```
 
 The CAPTCHA widget will automatically appear on the contact form when configured.
+
+## Botpress Chatbot (Optional)
+
+Add an AI-powered chatbot to your website using Botpress.
+
+### Setup:
+
+1. Create a free account at [Botpress Cloud](https://app.botpress.cloud/)
+2. Create a new bot and configure your flows/knowledge base
+3. Go to **Integrations** → **Webchat**
+4. Click **Configure** and customize the appearance
+5. Copy the two script URLs from the **Pre-configured** tab
+
+### Add to your website:
+
+Edit `app/layout.tsx` and replace the Botpress scripts:
+
+```tsx
+{/* Botpress Chat Widget */}
+<Script
+  src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"
+  strategy="lazyOnload"
+/>
+<Script
+  src="https://files.bpcontent.cloud/YOUR_BOT_ID/YOUR_CONFIG.js"
+  strategy="lazyOnload"
+/>
+```
+
+### Remove chatbot:
+
+To remove the chatbot entirely, delete both `<Script>` tags from `app/layout.tsx`.
+
+### Features:
+
+- AI-powered conversations with knowledge base
+- Customizable appearance and colors
+- Multi-language support
+- Lead capture and integrations
+- Free tier available (1000 messages/month)
 
 ## Project Structure
 
