@@ -11,8 +11,10 @@ const PRICES: Record<string, string> = {
   '.net': '14,99',
 };
 
-// FOSSBilling API configuration
-const FOSSBILLING_URL = process.env.FOSSBILLING_URL || 'https://billing.gwcwebdesign.com';
+// WHMCS API configuration
+const WHMCS_URL = process.env.WHMCS_URL || 'https://billing.gwcwebdesign.com';
+const WHMCS_API_IDENTIFIER = process.env.WHMCS_API_IDENTIFIER || '';
+const WHMCS_API_SECRET = process.env.WHMCS_API_SECRET || '';
 
 interface DomainResult {
   tld: string;
@@ -20,37 +22,68 @@ interface DomainResult {
   price: string | null;
 }
 
-async function checkDomainWithFossBilling(domain: string, tld: string): Promise<DomainResult> {
-  try {
-    // Attempt to call FOSSBilling API
-    const response = await fetch(`${FOSSBILLING_URL}/api/guest/servicedomain/check`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        sld: domain,
-        tld: tld.replace('.', ''),
-      }),
-    });
+async function checkDomainWithWHMCS(domain: string, tld: string): Promise<DomainResult> {
+  // If WHMCS credentials are configured, use the API
+  if (WHMCS_API_IDENTIFIER && WHMCS_API_SECRET) {
+    try {
+      const fullDomain = `${domain}${tld}`;
 
-    if (response.ok) {
-      const data = await response.json();
+      const params = new URLSearchParams({
+        action: 'DomainWhois',
+        identifier: WHMCS_API_IDENTIFIER,
+        secret: WHMCS_API_SECRET,
+        domain: fullDomain,
+        responsetype: 'json',
+      });
+
+      const response = await fetch(`${WHMCS_URL}/includes/api.php`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString(),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        // WHMCS returns status: "available" or "unavailable"
+        const isAvailable = data.status === 'available';
+        return {
+          tld,
+          available: isAvailable,
+          price: isAvailable ? PRICES[tld] : null,
+        };
+      }
+    } catch (error) {
+      console.error(`WHMCS API error for ${domain}${tld}:`, error);
+    }
+  }
+
+  // Fallback: Use DNS lookup to check if domain exists
+  try {
+    const fullDomain = `${domain}${tld}`;
+    const dnsResponse = await fetch(
+      `https://dns.google/resolve?name=${fullDomain}&type=A`,
+      { next: { revalidate: 60 } }
+    );
+
+    if (dnsResponse.ok) {
+      const dnsData = await dnsResponse.json();
+      // If domain has DNS records, it's likely taken
+      const isTaken = dnsData.Status === 0 && dnsData.Answer && dnsData.Answer.length > 0;
       return {
         tld,
-        available: data.result?.available ?? false,
-        price: data.result?.available ? PRICES[tld] : null,
+        available: !isTaken,
+        price: !isTaken ? PRICES[tld] : null,
       };
     }
   } catch {
-    // FOSSBilling not available, fall back to mock
+    // DNS check failed, assume available
   }
 
-  // Fallback: Mock response (simulates random availability)
-  // Remove this when FOSSBilling is deployed and working
-  const isAvailable = Math.random() > 0.3; // 70% chance of being available
+  // Final fallback: Mark as potentially available
   return {
     tld,
-    available: isAvailable,
-    price: isAvailable ? PRICES[tld] : null,
+    available: true,
+    price: PRICES[tld],
   };
 }
 
@@ -70,7 +103,7 @@ export async function POST(request: Request) {
 
     // Check all TLDs in parallel
     const results = await Promise.all(
-      TLDS.map((tld) => checkDomainWithFossBilling(cleanDomain, tld))
+      TLDS.map((tld) => checkDomainWithWHMCS(cleanDomain, tld))
     );
 
     return NextResponse.json({ results });

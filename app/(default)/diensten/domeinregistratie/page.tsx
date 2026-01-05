@@ -150,7 +150,9 @@ export default function Domeinregistratie() {
           </div>
           <div className="text-center mt-12">
             <a
-              href="/contact"
+              href="https://billing.gwcwebdesign.com/cart.php?a=add&domain=register"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn bg-blue-600 text-white hover:bg-blue-700 px-8 py-3 rounded-lg font-medium"
             >
               {t.cta}

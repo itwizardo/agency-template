@@ -30,9 +30,9 @@ export default function Webhosting() {
         { title: "Schaalbare Oplossingen", desc: "Eenvoudig opschalen naarmate uw website groeit" },
       ],
       packages: [
-        { name: "Starter", priceMonthly: "4,99", priceYearly: "49,90", originalYearly: "59,88", storage: "10 GB SSD", websites: "1 Website", email: "5 E-mail accounts", bandwidth: "Onbeperkt verkeer" },
-        { name: "Business", priceMonthly: "9,99", priceYearly: "99,90", originalYearly: "119,88", storage: "50 GB SSD", websites: "5 Websites", email: "25 E-mail accounts", bandwidth: "Onbeperkt verkeer", popular: true },
-        { name: "Premium", priceMonthly: "19,99", priceYearly: "199,90", originalYearly: "239,88", storage: "100 GB SSD", websites: "Onbeperkt", email: "Onbeperkt e-mail", bandwidth: "Onbeperkt verkeer" },
+        { name: "Starter", priceMonthly: "4,99", priceYearly: "49,90", originalYearly: "59,88", storage: "10 GB SSD", websites: "1 Website", email: "5 E-mail accounts", bandwidth: "Onbeperkt verkeer", pid: 1 },
+        { name: "Business", priceMonthly: "9,99", priceYearly: "99,90", originalYearly: "119,88", storage: "50 GB SSD", websites: "5 Websites", email: "25 E-mail accounts", bandwidth: "Onbeperkt verkeer", popular: true, pid: 2 },
+        { name: "Premium", priceMonthly: "19,99", priceYearly: "199,90", originalYearly: "239,88", storage: "100 GB SSD", websites: "Onbeperkt", email: "Onbeperkt e-mail", bandwidth: "Onbeperkt verkeer", pid: 3 },
       ],
       cta: "Pakket Kiezen",
     },
@@ -57,9 +57,9 @@ export default function Webhosting() {
         { title: "Scalable Solutions", desc: "Easily scale up as your website grows" },
       ],
       packages: [
-        { name: "Starter", priceMonthly: "4,99", priceYearly: "49,90", originalYearly: "59,88", storage: "10 GB SSD", websites: "1 Website", email: "5 Email accounts", bandwidth: "Unlimited traffic" },
-        { name: "Business", priceMonthly: "9,99", priceYearly: "99,90", originalYearly: "119,88", storage: "50 GB SSD", websites: "5 Websites", email: "25 Email accounts", bandwidth: "Unlimited traffic", popular: true },
-        { name: "Premium", priceMonthly: "19,99", priceYearly: "199,90", originalYearly: "239,88", storage: "100 GB SSD", websites: "Unlimited", email: "Unlimited email", bandwidth: "Unlimited traffic" },
+        { name: "Starter", priceMonthly: "4,99", priceYearly: "49,90", originalYearly: "59,88", storage: "10 GB SSD", websites: "1 Website", email: "5 Email accounts", bandwidth: "Unlimited traffic", pid: 1 },
+        { name: "Business", priceMonthly: "9,99", priceYearly: "99,90", originalYearly: "119,88", storage: "50 GB SSD", websites: "5 Websites", email: "25 Email accounts", bandwidth: "Unlimited traffic", popular: true, pid: 2 },
+        { name: "Premium", priceMonthly: "19,99", priceYearly: "199,90", originalYearly: "239,88", storage: "100 GB SSD", websites: "Unlimited", email: "Unlimited email", bandwidth: "Unlimited traffic", pid: 3 },
       ],
       cta: "Choose Package",
     },
@@ -84,9 +84,9 @@ export default function Webhosting() {
         { title: "Skalierbare Lösungen", desc: "Einfach skalieren, wenn Ihre Website wächst" },
       ],
       packages: [
-        { name: "Starter", priceMonthly: "4,99", priceYearly: "49,90", originalYearly: "59,88", storage: "10 GB SSD", websites: "1 Website", email: "5 E-Mail-Konten", bandwidth: "Unbegrenzter Traffic" },
-        { name: "Business", priceMonthly: "9,99", priceYearly: "99,90", originalYearly: "119,88", storage: "50 GB SSD", websites: "5 Websites", email: "25 E-Mail-Konten", bandwidth: "Unbegrenzter Traffic", popular: true },
-        { name: "Premium", priceMonthly: "19,99", priceYearly: "199,90", originalYearly: "239,88", storage: "100 GB SSD", websites: "Unbegrenzt", email: "Unbegrenzte E-Mail", bandwidth: "Unbegrenzter Traffic" },
+        { name: "Starter", priceMonthly: "4,99", priceYearly: "49,90", originalYearly: "59,88", storage: "10 GB SSD", websites: "1 Website", email: "5 E-Mail-Konten", bandwidth: "Unbegrenzter Traffic", pid: 1 },
+        { name: "Business", priceMonthly: "9,99", priceYearly: "99,90", originalYearly: "119,88", storage: "50 GB SSD", websites: "5 Websites", email: "25 E-Mail-Konten", bandwidth: "Unbegrenzter Traffic", popular: true, pid: 2 },
+        { name: "Premium", priceMonthly: "19,99", priceYearly: "199,90", originalYearly: "239,88", storage: "100 GB SSD", websites: "Unbegrenzt", email: "Unbegrenzte E-Mail", bandwidth: "Unbegrenzter Traffic", pid: 3 },
       ],
       cta: "Paket Wählen",
     },
@@ -111,9 +111,9 @@ export default function Webhosting() {
         { title: "Solutions Évolutives", desc: "Montez en puissance facilement à mesure que votre site grandit" },
       ],
       packages: [
-        { name: "Starter", priceMonthly: "4,99", priceYearly: "49,90", originalYearly: "59,88", storage: "10 Go SSD", websites: "1 Site web", email: "5 Comptes e-mail", bandwidth: "Trafic illimité" },
-        { name: "Business", priceMonthly: "9,99", priceYearly: "99,90", originalYearly: "119,88", storage: "50 Go SSD", websites: "5 Sites web", email: "25 Comptes e-mail", bandwidth: "Trafic illimité", popular: true },
-        { name: "Premium", priceMonthly: "19,99", priceYearly: "199,90", originalYearly: "239,88", storage: "100 Go SSD", websites: "Illimité", email: "E-mail illimité", bandwidth: "Trafic illimité" },
+        { name: "Starter", priceMonthly: "4,99", priceYearly: "49,90", originalYearly: "59,88", storage: "10 Go SSD", websites: "1 Site web", email: "5 Comptes e-mail", bandwidth: "Trafic illimité", pid: 1 },
+        { name: "Business", priceMonthly: "9,99", priceYearly: "99,90", originalYearly: "119,88", storage: "50 Go SSD", websites: "5 Sites web", email: "25 Comptes e-mail", bandwidth: "Trafic illimité", popular: true, pid: 2 },
+        { name: "Premium", priceMonthly: "19,99", priceYearly: "199,90", originalYearly: "239,88", storage: "100 Go SSD", websites: "Illimité", email: "E-mail illimité", bandwidth: "Trafic illimité", pid: 3 },
       ],
       cta: "Choisir le Forfait",
     },
@@ -138,9 +138,9 @@ export default function Webhosting() {
         { title: "Soluciones Escalables", desc: "Escale fácilmente a medida que su sitio crece" },
       ],
       packages: [
-        { name: "Starter", priceMonthly: "4,99", priceYearly: "49,90", originalYearly: "59,88", storage: "10 GB SSD", websites: "1 Sitio web", email: "5 Cuentas de correo", bandwidth: "Tráfico ilimitado" },
-        { name: "Business", priceMonthly: "9,99", priceYearly: "99,90", originalYearly: "119,88", storage: "50 GB SSD", websites: "5 Sitios web", email: "25 Cuentas de correo", bandwidth: "Tráfico ilimitado", popular: true },
-        { name: "Premium", priceMonthly: "19,99", priceYearly: "199,90", originalYearly: "239,88", storage: "100 GB SSD", websites: "Ilimitado", email: "Correo ilimitado", bandwidth: "Tráfico ilimitado" },
+        { name: "Starter", priceMonthly: "4,99", priceYearly: "49,90", originalYearly: "59,88", storage: "10 GB SSD", websites: "1 Sitio web", email: "5 Cuentas de correo", bandwidth: "Tráfico ilimitado", pid: 1 },
+        { name: "Business", priceMonthly: "9,99", priceYearly: "99,90", originalYearly: "119,88", storage: "50 GB SSD", websites: "5 Sitios web", email: "25 Cuentas de correo", bandwidth: "Tráfico ilimitado", popular: true, pid: 2 },
+        { name: "Premium", priceMonthly: "19,99", priceYearly: "199,90", originalYearly: "239,88", storage: "100 GB SSD", websites: "Ilimitado", email: "Correo ilimitado", bandwidth: "Tráfico ilimitado", pid: 3 },
       ],
       cta: "Elegir Paquete",
     },
@@ -242,7 +242,9 @@ export default function Webhosting() {
                     </li>
                   </ul>
                   <a
-                    href="/contact"
+                    href={`https://billing.gwcwebdesign.com/cart.php?a=add&pid=${pkg.pid}&billingcycle=${isYearly ? 'annually' : 'monthly'}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`block text-center py-3 rounded-lg font-medium transition-colors ${pkg.popular ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-700 text-white hover:bg-gray-600'}`}
                   >
                     {t.cta}

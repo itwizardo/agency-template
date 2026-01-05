@@ -147,7 +147,8 @@ export default function DomainSearch() {
   };
 
   const getRegisterUrl = (domainName: string, tld: string) => {
-    return `https://billing.gwcwebdesign.com/order/domain/register?domain=${domainName}${tld}`;
+    // WHMCS cart URL format for domain registration
+    return `https://billing.gwcwebdesign.com/cart.php?a=add&domain=register&query=${domainName}${tld}`;
   };
 
   return (
