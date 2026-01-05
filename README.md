@@ -15,6 +15,9 @@ Built with **Next.js 15**, **TailwindCSS v4**, and **TypeScript**.
   - Hosting package pricing
   - Client dashboard (email lookup)
   - Contact form → Support tickets
+- **Spam Protection**
+  - Input validation (email, phone, message length)
+  - Cloudflare Turnstile CAPTCHA (optional)
 - **Telegram notifications** for contact form
 - **Responsive design** with dark theme
 - **SEO optimized**
@@ -89,6 +92,30 @@ TELEGRAM_TOPIC_ID=optional_topic_id
 1. Message [@BotFather](https://t.me/BotFather) to create a bot
 2. Message [@userinfobot](https://t.me/userinfobot) to get your chat ID
 3. Add the bot to your group/channel
+
+## Spam Protection
+
+The contact form includes built-in validation:
+- Name: minimum 2 characters
+- Email: valid format required
+- Phone: valid format (optional field)
+- WhatsApp: valid phone number required
+- Message: minimum 10 characters
+
+### Cloudflare Turnstile (Optional)
+
+Add CAPTCHA protection to your contact form:
+
+1. Go to [Cloudflare Turnstile](https://dash.cloudflare.com/turnstile)
+2. Create a new widget (select "Managed" for best UX)
+3. Add to your `.env.local`:
+
+```env
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=your_site_key
+TURNSTILE_SECRET_KEY=your_secret_key
+```
+
+The CAPTCHA widget will automatically appear on the contact form when configured.
 
 ## Project Structure
 
