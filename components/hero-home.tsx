@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useLanguage } from "@/lib/i18n";
@@ -75,11 +75,13 @@ export default function HeroHome() {
   const [visibleLines, setVisibleLines] = useState<number[]>([]);
   const [showWebsite, setShowWebsite] = useState(false);
   const [iframeReady, setIframeReady] = useState(false);
+  const [iframeError, setIframeError] = useState(false);
   const [preloadIframe, setPreloadIframe] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const iframeLoadedRef = useRef(false);
 
-  // Iframe is fully loaded when both transition started AND iframe has loaded
-  const websiteLoaded = showWebsite && iframeReady;
+  // Iframe is fully loaded when both transition started AND iframe has loaded (or errored with fallback)
+  const websiteLoaded = showWebsite && (iframeReady || iframeError);
 
   useEffect(() => {
     setMounted(true);
@@ -87,6 +89,7 @@ export default function HeroHome() {
     setVisibleLines([]);
     setShowWebsite(false);
     setIframeReady(false);
+    setIframeError(false);
 
     // Start preloading iframe immediately (hidden)
     setPreloadIframe(true);
@@ -102,6 +105,15 @@ export default function HeroHome() {
     setTimeout(() => {
       setShowWebsite(true);
     }, 5000);
+
+    // Fallback timeout: if iframe doesn't load within 8 seconds, show fallback image
+    const iframeTimeout = setTimeout(() => {
+      if (!iframeLoadedRef.current) {
+        setIframeError(true);
+      }
+    }, 8000);
+
+    return () => clearTimeout(iframeTimeout);
   }, []);
 
   // Wave colors for dark theme
@@ -317,7 +329,7 @@ export default function HeroHome() {
                   </div>
 
                   {/* Iframe - preloads immediately but hidden until transition */}
-                  {preloadIframe && (
+                  {preloadIframe && !iframeError && (
                     <iframe
                       src="https://aiwebgen.io"
                       className={`absolute inset-0 w-full h-full border-0 transition-opacity duration-300 ${
@@ -330,7 +342,23 @@ export default function HeroHome() {
                         height: '200%'
                       }}
                       title="Live website preview"
-                      onLoad={() => setIframeReady(true)}
+                      onLoad={() => {
+                        iframeLoadedRef.current = true;
+                        setIframeReady(true);
+                      }}
+                      onError={() => setIframeError(true)}
+                    />
+                  )}
+
+                  {/* Fallback image when iframe fails to load */}
+                  {iframeError && (
+                    <Image
+                      src="/GJPortfolio/aiwebgen.png"
+                      alt="AI WebGen Preview"
+                      fill
+                      className={`object-cover object-top transition-opacity duration-300 ${
+                        showWebsite ? 'opacity-100' : 'opacity-0'
+                      }`}
                     />
                   )}
                 </div>
