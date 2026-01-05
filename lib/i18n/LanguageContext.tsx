@@ -10,12 +10,12 @@ import esTranslations from '@/locales/es.json';
 export type Locale = 'nl' | 'en' | 'de' | 'fr' | 'es';
 type Translations = typeof nlTranslations;
 
-export const localeNames: Record<Locale, { name: string; flag: string }> = {
-  nl: { name: 'Nederlands', flag: '🇳🇱' },
-  en: { name: 'English', flag: '🇬🇧' },
-  de: { name: 'Deutsch', flag: '🇩🇪' },
-  fr: { name: 'Français', flag: '🇫🇷' },
-  es: { name: 'Español', flag: '🇪🇸' },
+export const localeNames: Record<Locale, { name: string; flag: string; code: string }> = {
+  nl: { name: 'Nederlands', flag: '🇳🇱', code: 'NL' },
+  en: { name: 'English', flag: '🇬🇧', code: 'GB' },
+  de: { name: 'Deutsch', flag: '🇩🇪', code: 'DE' },
+  fr: { name: 'Français', flag: '🇫🇷', code: 'FR' },
+  es: { name: 'Español', flag: '🇪🇸', code: 'ES' },
 };
 
 interface LanguageContextType {

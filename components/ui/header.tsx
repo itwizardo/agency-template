@@ -32,10 +32,10 @@ export default function Header() {
             </div>
 
             {/* Desktop Navigation - right aligned */}
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex items-center gap-4 lg:gap-6 xl:gap-8">
               <Link
                 href="/"
-                className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 whitespace-nowrap"
               >
                 {t.header.home}
               </Link>
@@ -46,7 +46,7 @@ export default function Header() {
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
               >
-                <button className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-1">
+                <button className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-1 whitespace-nowrap">
                   {t.footer.services.title}
                   <svg className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -77,37 +77,37 @@ export default function Header() {
 
               <Link
                 href="/diensten/domeinregistratie"
-                className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 whitespace-nowrap"
               >
                 {t.footer.services.domainRegistration}
               </Link>
               <Link
                 href="/diensten/webhosting"
-                className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 whitespace-nowrap"
               >
                 {t.footer.services.webhosting}
               </Link>
               <Link
                 href="/pakketten"
-                className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 whitespace-nowrap"
               >
                 {t.header.packages}
               </Link>
               <Link
                 href="/portfolio"
-                className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 whitespace-nowrap"
               >
                 {t.header.portfolio}
               </Link>
               <Link
                 href="/contact"
-                className="text-[15px] font-medium text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200 whitespace-nowrap"
               >
                 {t.header.contact}
               </Link>
               <Link
                 href="/mijn-account"
-                className="text-[15px] font-medium text-blue-400 hover:text-blue-300 transition-colors duration-200 flex items-center gap-1"
+                className="text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors duration-200 flex items-center gap-1 whitespace-nowrap"
               >
                 {t.header.clientPortal}
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
