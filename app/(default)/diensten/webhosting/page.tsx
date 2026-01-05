@@ -1,12 +1,38 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLanguage } from "@/lib/i18n";
 import PageHeader from "@/components/page-header";
+
+interface ProductPricing {
+  pid: number;
+  name: string;
+  priceMonthly: string;
+  priceYearly: string;
+  originalYearly: string;
+}
 
 export default function Webhosting() {
   const { locale } = useLanguage();
   const [isYearly, setIsYearly] = useState(false);
+  const [dynamicPrices, setDynamicPrices] = useState<ProductPricing[]>([]);
+
+  useEffect(() => {
+    async function fetchPricing() {
+      try {
+        const response = await fetch('/api/hosting-pricing');
+        if (response.ok) {
+          const data = await response.json();
+          if (data.products) {
+            setDynamicPrices(data.products);
+          }
+        }
+      } catch (error) {
+        console.error('Failed to fetch hosting pricing:', error);
+      }
+    }
+    fetchPricing();
+  }, []);
 
   const content = {
     nl: {
@@ -148,6 +174,24 @@ export default function Webhosting() {
 
   const t = content[locale];
 
+  // Get price for a package, using dynamic WHMCS price if available
+  const getPrice = (pkg: typeof t.packages[0], type: 'monthly' | 'yearly' | 'original') => {
+    const dynamicPrice = dynamicPrices.find(p => p.pid === pkg.pid);
+    if (dynamicPrice) {
+      switch (type) {
+        case 'monthly': return dynamicPrice.priceMonthly;
+        case 'yearly': return dynamicPrice.priceYearly;
+        case 'original': return dynamicPrice.originalYearly;
+      }
+    }
+    // Fallback to hardcoded prices
+    switch (type) {
+      case 'monthly': return pkg.priceMonthly;
+      case 'yearly': return pkg.priceYearly;
+      case 'original': return pkg.originalYearly;
+    }
+  };
+
   return (
     <>
       <PageHeader title={t.title} subtitle={t.subtitle} />
@@ -203,9 +247,9 @@ export default function Webhosting() {
                     <h3 className="text-xl font-bold text-white mb-2">{pkg.name}</h3>
                     <div className="text-white">
                       {isYearly && (
-                        <span className="text-gray-500 line-through text-lg mr-2">€{pkg.originalYearly}</span>
+                        <span className="text-gray-500 line-through text-lg mr-2">€{getPrice(pkg, 'original')}</span>
                       )}
-                      <span className="text-4xl font-bold">€{isYearly ? pkg.priceYearly : pkg.priceMonthly}</span>
+                      <span className="text-4xl font-bold">€{isYearly ? getPrice(pkg, 'yearly') : getPrice(pkg, 'monthly')}</span>
                       <span className="text-gray-400">{isYearly ? t.perYear : t.perMonth}</span>
                     </div>
                   </div>

@@ -105,17 +105,15 @@ export default function Header() {
               >
                 {t.header.contact}
               </Link>
-              <a
-                href="https://billing.gwcwebdesign.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/mijn-account"
                 className="text-[15px] font-medium text-blue-400 hover:text-blue-300 transition-colors duration-200 flex items-center gap-1"
               >
                 {t.header.clientPortal}
                 <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
-              </a>
+              </Link>
               <div className="flex items-center ml-4 pl-4 border-l border-gray-700/50">
                 <LanguageToggle />
               </div>
@@ -221,18 +219,16 @@ export default function Header() {
                 >
                   {t.header.quote}
                 </Link>
-                <a
-                  href="https://billing.gwcwebdesign.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/mijn-account"
                   className="mt-2 py-3 text-blue-400 text-center rounded-xl font-medium hover:bg-white/5 transition-colors flex items-center justify-center gap-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {t.header.clientPortal}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
-                </a>
+                </Link>
               </nav>
             </div>
           </div>
